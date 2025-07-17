@@ -70,7 +70,7 @@ const Banner = () => {
                   <div className="flex flex-col w-screen justify-center gap-4 pt-12 text-center order-2 relative z-10">
                     <h1 className="text-2xl font-bold">{data?.subtitle}</h1>
                     <h1 className="text-7xl font-bold">{data?.title}</h1>
-                    <h1 className="text-5xl min-w-full uppercase text-nowrap text-transparent bg-clip-text bg-gradient-to-r from-brandYellow/90 to-[#fff]/90 text-[100px] font-bold">
+                    <h1 className="text-5xl min-w-full uppercase text-nowrap text-transparent bg-clip-text bg-gradient-to-r from-bg-[#fdc62e] to-[#fff]/90 text-[100px] font-bold">
                       {data?.title2}
                     </h1>
                     <div>
