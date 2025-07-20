@@ -4,6 +4,7 @@ import Banner from "../../components/Banner";
 import Category from "../../components/Home Components/Category";
 import Category2 from "../../components/Home Components/Category2";
 import Offer from "../../components/Home Components/Offer";
+import Reviews from "../../components/Home Components/Reviews";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Category />
       <Category2 />
       <Offer />
+      <Reviews />
     </>
   );
 };
