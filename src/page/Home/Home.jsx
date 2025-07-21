@@ -9,14 +9,16 @@ import Reviews from "../../components/Home Components/Reviews";
 
 const Home = () => {
   return (
-    <div className="container m-auto">
+    <div>
       <Navbar />
-      <Banner />
-      <Services />
-      <Category />
-      <Category2 />
-      <Offer />
-      <Reviews />
+      <div className="container m-auto">
+        <Banner />
+        <Services />
+        <Category />
+        <Category2 />
+        <Offer />
+        <Reviews />
+      </div>
     </div>
   );
 };

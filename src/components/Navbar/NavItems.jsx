@@ -1,44 +1,60 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { HiMenu } from "react-icons/hi";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
 const NavItems = () => {
-  const menuItems = (
-    <>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/shop">Shop</NavLink>
-      </li>
-      <li>
-        <NavLink to="/aboutUs">AboutUs</NavLink>
-      </li>
-      <li>
-        <NavLink to="/faq">FAQ</NavLink>
-      </li>
-      <li>
-        <NavLink to="/faq">ContactUs</NavLink>
-      </li>
-    </>
-  );
+  const [activeLink, setActiveLink] = useState("Home");
+
+  const menuItems = [
+    {
+      label: "Home",
+      path: "/",
+    },
+    {
+      label: "Shop",
+      path: "/shop",
+    },
+    {
+      label: "AboutUs",
+      path: "/aboutUs",
+    },
+    {
+      label: "FAQ",
+      path: "/faq",
+    },
+    {
+      label: "Contac tUs",
+      path: "/contactUs",
+    },
+  ];
 
   return (
-    <nav className="">
-      <div className="bg-yellow-600 py-6 md:py-3 -mt-20 md:mt-0">
-        <div className="container mx-auto flex justify-between items-center nav-container">
-          <div>
-            <ul className="hidden md:flex items-center space-x-10">
-              {menuItems}
-            </ul>
-          </div>
+    <nav className="bg-[#f5e141] py-3 h-[70px]">
+      <div className="container mx-auto flex justify-between items-center nav-container h-full">
+        <ul className="flex items-center gap-10">
+          {menuItems?.map((item, index) => (
+            <li
+              key={index}
+              onClick={() => setActiveLink(item.label)}
+              className={`cursor-pointer pb-1 ${
+                activeLink === item.label
+                  ? "border-b-4 border-red-600"
+                  : "border-b-4 border-[#f5e141]"
+              }`}
+            >
+              <NavLink to={item.path}>{item.label}</NavLink>
+            </li>
+          ))}
+        </ul>
 
-          <div className="flex items-center">
-            <Link className="hidden md:flex" to={"/login"}>
-              <button color="red">Login</button>
-            </Link>
-          </div>
+        <div className="flex items-center">
+          <Link className="flex" to={"/login"}>
+            <button color="red" className="text-lg">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </nav>
