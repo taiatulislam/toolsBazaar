@@ -4,8 +4,6 @@ import bg1 from "../../src/assets/banner/bg1.png";
 import Img2 from "../../src/assets/banner/yellow-tools-kit-1.png";
 import bg2 from "../../src/assets/banner/bg2.png";
 import Img3 from "../../src/assets/banner/yellow-chainsaw1.png";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Banner = () => {
   const bannerData = [
@@ -49,13 +47,13 @@ const Banner = () => {
   };
 
   return (
-    <div className="mt-2 drop-shadow rounded-3xl px-5">
+    <div className="mt-2 drop-shadow rounded-3xl">
       <Slider {...settings}>
         {bannerData.map((data) => (
           <div key={data?.id}>
             {/* Banner section */}
             <div
-              className="p-5 rounded-3xl h-[85vh] flex justify-center items-center"
+              className="p-5 overflow-hidden rounded-3xl min-h-[650px] hero-bg-color flex justify-center items-center"
               style={{
                 backgroundImage: `url(${data?.bg})`,
                 backgroundSize: "cover",
@@ -64,18 +62,22 @@ const Banner = () => {
                 borderRadius: "1.5rem",
               }}
             >
-              <div className="container p-8">
-                <div className="grid grid-cols-1 w-full">
+              <div className="container pb-0">
+                <div className="grid grid-cols-2 w-full">
                   {/* text content section */}
-                  <div className="flex flex-col w-screen justify-center gap-4 pt-12 text-center order-2 relative z-10">
-                    <h1 className="text-2xl font-bold">{data?.subtitle}</h1>
-                    <h1 className="text-7xl font-bold">{data?.title}</h1>
-                    <h1 className="text-5xl min-w-full uppercase text-nowrap text-transparent bg-clip-text bg-gradient-to-r from-bg-[#fdc62e] to-[#fff]/90 text-[100px] font-bold">
+                  <div className="flex flex-col w-screen justify-center gap-4 pl-3 pt-0 text-left order-1 relative z-10">
+                    <h1 className="text-6xl font-bold">
+                      {data?.subtitle}
+                    </h1>
+                    <h1 className="text-6xl font-bold">
+                      {data?.title}
+                    </h1>
+                    <h1 className="text-5xl min-w-full uppercase text-nowrap text-transparent bg-clip-text bg-gradient-to-r from-[#f5e141]/90 to-[#fff]/90 text-[80px] font-bold">
                       {data?.title2}
                     </h1>
                     <div>
                       <button
-                        className={`bg-[#fdc62e] text-black cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-1`}
+                        className={`bg-[#f5e141] text-black cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10`}
                       >
                         Shop By Category
                       </button>
@@ -87,7 +89,7 @@ const Banner = () => {
                       <img
                         src={data?.img}
                         alt="banner"
-                        className="w-[300px] h-[200px] scale-120 object-contain mx-auto drop-shadow-[-8px_4px_6px rgba(0,0,0,.4)] relative z-10"
+                        className="w-[450px] h-[450px] scale-105 object-contain mx-auto drop-shadow-[-8px_4px_6px_◎□ rgba(0,0,0,.4)] relative z-40"
                       />
                     </div>
                   </div>

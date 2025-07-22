@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const Category = () => {
   return (
-    <div className="mt-4 px-5">
+    <div className="mt-4">
       <div className="grid grid-cols-4 gap-8">
         {/* 1st col */}
         <div className="py-10 pl-5 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-xl relative h-[320px] flex items-end hover:scale-110 duration-300">
