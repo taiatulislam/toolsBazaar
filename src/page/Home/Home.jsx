@@ -6,6 +6,7 @@ import Category from "../../components/Home Components/Category";
 import Category2 from "../../components/Home Components/Category2";
 import Offer from "../../components/Home Components/Offer";
 import Reviews from "../../components/Home Components/Reviews";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <Offer />
         <Reviews />
       </div>
+      <Footer />
     </div>
   );
 };
