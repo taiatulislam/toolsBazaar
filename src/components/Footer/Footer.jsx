@@ -29,7 +29,7 @@ export default function Footer() {
                 </li>
 
                 <li>
-                  <a className="text-[#FF9D00] text-[15px]">
+                  <a className="text-text-primary text-[15px]">
                     0000 - 0000 - 0000
                   </a>
                 </li>
@@ -39,7 +39,7 @@ export default function Footer() {
 
           <div className="ml-10">
             <div>
-              <h1 className="text-[#FF9D00] text-lg font-bold mb-5 font-montserrat mt-5 ">
+              <h1 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5 ">
                 Know Us
               </h1>
               <ul className="space-y-2">
@@ -52,7 +52,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h1 className="text-[#FF9D00] text-lg font-bold mb-5 font-montserrat mt-5">
+            <h1 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5">
               Useful Link
             </h1>
             <ul className="space-y-2">
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[#FF9D00] text-lg font-bold mb-5 font-montserrat mt-5">
+            <h4 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5">
               Information
             </h4>
             <ul className="space-y-2">
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[#FF9D00] text-lg font-bold mb-5 font-montserrat mt-5 ">
+            <h4 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5 ">
               Special Offers
             </h4>
             <ul className="space-y-2">
@@ -97,7 +97,7 @@ export default function Footer() {
 
         <div className="container mx-auto text-gray-300 text-sm flex justify-between items-center">
           <p className="text-left">
-            &copy; {new Date().getFullYear()}©ToolsBazaar All Right Reserved.
+            &copy; {new Date().getFullYear()} - ToolsBazaar All Right Reserved.
           </p>
           <div className="flex justify-end items-center gap-2">
             <p>We Accepted</p>
