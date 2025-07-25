@@ -8,6 +8,7 @@ import Offer from "../../components/Home Components/Offer";
 import Reviews from "../../components/Home Components/Reviews";
 import Footer from "../../components/Footer/Footer";
 import Newsletter from "../../components/Home Components/Newsletter";
+import BestSeller from "../../components/Home Components/BestSeller";
 
 const Home = () => {
   return (
@@ -20,6 +21,8 @@ const Home = () => {
         <Category2 />
         <Offer />
         <Reviews />
+
+        <BestSeller />
       </div>
       <Newsletter />
       <Footer />
