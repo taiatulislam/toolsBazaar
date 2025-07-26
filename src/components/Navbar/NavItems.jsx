@@ -5,7 +5,7 @@ import { HiMenu } from "react-icons/hi";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
 const NavItems = () => {
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState("/");
 
   const menuItems = [
     {
@@ -14,19 +14,15 @@ const NavItems = () => {
     },
     {
       label: "Shop",
-      path: "/shop",
+      path: "shop",
     },
     {
-      label: "AboutUs",
-      path: "/aboutUs",
+      label: "About Us",
+      path: "about",
     },
     {
-      label: "FAQ",
-      path: "/faq",
-    },
-    {
-      label: "Contac tUs",
-      path: "/contactUs",
+      label: "Contact Us",
+      path: "contact",
     },
   ];
 
@@ -37,9 +33,9 @@ const NavItems = () => {
           {menuItems?.map((item, index) => (
             <li
               key={index}
-              onClick={() => setActiveLink(item.label)}
+              onClick={() => setActiveLink(item.path)}
               className={`cursor-pointer pb-1 ${
-                activeLink === item.label
+                activeLink === item.path
                   ? "border-b-4 border-red-600"
                   : "border-b-4 border-primary"
               }`}

@@ -9,11 +9,11 @@ import Reviews from "../../components/Home Components/Reviews";
 import Footer from "../../components/Footer/Footer";
 import Newsletter from "../../components/Home Components/Newsletter";
 import BestSeller from "../../components/Home Components/BestSeller";
+import { Outlet } from "react-router";
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <div className="container m-auto">
         <Banner />
         <Services />
@@ -25,7 +25,6 @@ const Home = () => {
         <BestSeller />
       </div>
       <Newsletter />
-      <Footer />
     </div>
   );
 };
