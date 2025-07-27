@@ -1,5 +1,5 @@
 import { FaStar, FaShoppingCart, FaHeart } from "react-icons/fa";
-import Image3 from "../../assets/banner/yellow-chainsaw1.png";
+import Image3 from "../../src/assets/banner/yellow-chainsaw1.png";
 
 const ProductCard = () => {
   const title = "chainsaw1";

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCard from "../ProductCard";
 
 const BestSeller = () => {
   return (

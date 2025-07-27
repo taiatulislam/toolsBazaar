@@ -1,12 +1,11 @@
-import OfferCard from "./OfferCard";
-
+import OfferCard from "../OfferCard";
 
 const Offer = () => {
   return (
-    <div className="my-10">
+    <div className="my-8">
       {/* Offer */}
       <div>
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-row gap-6">
           {/* Offer 01 */}
           <div
             className="rounded-lg w-full px-10 py-16"
@@ -23,9 +22,7 @@ const Offer = () => {
             <h1 className="text-4xl font-bold my-5">
               Get 25% <br /> Flat Off
             </h1>
-            <button
-              className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl"
-            >
+            <button className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl">
               Shop Now
             </button>
           </div>
@@ -45,9 +42,7 @@ const Offer = () => {
             <h1 className="text-white text-4xl font-bold my-5">
               Tools Kit <br /> Box
             </h1>
-            <button
-              className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl"
-            >
+            <button className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl">
               Shop Now
             </button>
           </div>
