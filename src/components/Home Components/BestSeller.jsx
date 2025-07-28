@@ -1,6 +1,11 @@
 import { Link } from "react-router";
 import ProductCard from "../ProductCard";
 
+import Featured1 from "../../assets/featured/featured-1.jpg";
+import Featured2 from "../../assets/featured/featured-2.jpg";
+import Featured3 from "../../assets/featured/featured-3.jpg";
+import Featured4 from "../../assets/featured/featured-4.jpg";
+
 const BestSeller = () => {
   return (
     <div className="mt-20">
@@ -30,8 +35,8 @@ const BestSeller = () => {
 
       <div className="grid grid-cols-4 gap-5 my-10">
         {/* Product-Cards */}
-        {[...Array(4)].map((_, index) => (
-          <ProductCard key={index} />
+        {data.map((item, index) => (
+          <ProductCard key={index} item={item} />
         ))}
       </div>
       <Link to="/shop" className="hidden">
@@ -42,5 +47,32 @@ const BestSeller = () => {
     </div>
   );
 };
+
+const data = [
+  {
+    title: "Digital Multimeter",
+    image: Featured1,
+    price: "29.99",
+    offer: { discount: "10" },
+  },
+  {
+    title: "Reflective Vest",
+    image: Featured2,
+    price: "14.99",
+    offer: { discount: "15" },
+  },
+  {
+    title: "Self-Leveling Laser",
+    image: Featured3,
+    price: "9.99",
+    offer: { discount: "5" },
+  },
+  {
+    title: "Hydraulic Car Jack",
+    image: Featured4,
+    price: "29.99",
+    offer: { discount: "25" },
+  },
+];
 
 export default BestSeller;

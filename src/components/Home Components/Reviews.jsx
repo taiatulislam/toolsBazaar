@@ -1,7 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
 
 const reviews = [
@@ -113,6 +111,7 @@ export default function Reviews() {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    arrows: false,
     appendDots: (dots) => (
       <div style={{ bottom: "-25px" }}>
         <ul style={{ margin: "0px" }}> {dots} </ul>

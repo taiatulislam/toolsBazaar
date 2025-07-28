@@ -25,7 +25,7 @@ const Offer = () => {
           <h1 className="text-4xl font-bold my-5">
             Get 25% <br /> Flat Off
           </h1>
-          <button className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl">
+          <button className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl cursor-pointer">
             Shop Now
           </button>
         </div>
@@ -44,7 +44,7 @@ const Offer = () => {
           <h1 className="text-white text-4xl font-bold my-5">
             Tools Kit <br /> Box
           </h1>
-          <button className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl">
+          <button className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl cursor-pointer">
             Shop Now
           </button>
         </div>
