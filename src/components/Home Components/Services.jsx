@@ -1,35 +1,8 @@
 import React from "react";
 
 export default function Services() {
-  const serviceItems = [
-    {
-      id: "1",
-      title: "FREE SHIPPING",
-      description: "FREE SHIPPING ON ALL US ORDERS",
-      images: "https://i.ibb.co/qFCW7M0K/home-icon.webp",
-    },
-    {
-      id: "2",
-      title: "ONLINE SUPPORT 24/7",
-      description: "SUPPORT ONLINE 24 HOURS A DAY",
-      images: "https://i.ibb.co/ym44cKpM/home-icon-2.webp",
-    },
-    {
-      id: "3",
-      title: "MONEY RETURN",
-      description: "MONEY BACK GUARANTEE UNDER 7 DAYS",
-      images: "https://i.ibb.co/mn85jsM/home-icon-3.webp",
-    },
-    {
-      id: "4",
-      title: "MEMBER DISCOUNT",
-      description: "ON EVERY ORDER OVER $120.00",
-      images: "https://i.ibb.co/CNN1J4T/home-icon-4.webp",
-    },
-  ];
-
   return (
-    <div className="my-8">
+    <div className="my-8 px-5">
       <div className="grid grid-cols-4 gap-6">
         {serviceItems.map((item) => (
           <Service key={item.id} item={item} />
@@ -53,3 +26,30 @@ const Service = ({ item }) => {
     </div>
   );
 };
+
+const serviceItems = [
+  {
+    id: "1",
+    title: "FREE SHIPPING",
+    description: "FREE SHIPPING ON ALL US ORDERS",
+    images: "https://i.ibb.co/qFCW7M0K/home-icon.webp",
+  },
+  {
+    id: "2",
+    title: "ONLINE SUPPORT 24/7",
+    description: "SUPPORT ONLINE 24 HOURS A DAY",
+    images: "https://i.ibb.co/ym44cKpM/home-icon-2.webp",
+  },
+  {
+    id: "3",
+    title: "MONEY RETURN",
+    description: "MONEY BACK GUARANTEE UNDER 7 DAYS",
+    images: "https://i.ibb.co/mn85jsM/home-icon-3.webp",
+  },
+  {
+    id: "4",
+    title: "MEMBER DISCOUNT",
+    description: "ON EVERY ORDER OVER $120.00",
+    images: "https://i.ibb.co/CNN1J4T/home-icon-4.webp",
+  },
+];

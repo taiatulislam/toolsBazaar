@@ -5,6 +5,7 @@ import Home from "../page/Home/Home";
 import About from "../page/About/About";
 import Contact from "../page/Contact/Contact";
 import Shop from "../page/Shop/Shop";
+import FAQ from "../page/FAQ/FAQ";
 
 const routes = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const routes = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "faq",
+        element: <FAQ />,
       },
       {
         path: "contact",

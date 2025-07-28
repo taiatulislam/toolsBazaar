@@ -8,7 +8,7 @@ import { Link } from "react-router";
 
 const Category = () => {
   return (
-    <div>
+    <div className="px-5">
       <div className="grid grid-cols-4 gap-6">
         {/* 1st col */}
         <CategoryCard

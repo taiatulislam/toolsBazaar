@@ -8,7 +8,7 @@ import Featured4 from "../../assets/featured/featured-4.jpg";
 
 const BestSeller = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 px-5">
       <div className="relative">
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-4xl font-bold montserrat text-center mb-3">

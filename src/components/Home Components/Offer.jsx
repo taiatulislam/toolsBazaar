@@ -7,7 +7,7 @@ import Offer4 from "../../assets/offer/offer-4.png";
 
 const Offer = () => {
   return (
-    <div className="my-8">
+    <div className="my-8 px-5">
       {/* Offer */}
       <div className="flex flex-row gap-6">
         {/* Offer 01 */}

@@ -53,13 +53,13 @@ const Banner = () => {
           <div key={data?.id}>
             {/* Banner section */}
             <div
-              className="p-20 overflow-hidden rounded-3xl min-h-[650px] hero-bg-color flex justify-center items-center"
+              className="p-20 overflow-hidden rounded-[16px] min-h-[650px] hero-bg-color flex justify-center items-center"
               style={{
                 backgroundImage: `url(${data?.bg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                borderRadius: "1.5rem",
+                borderRadius: "1rem",
               }}
             >
               <div className="grid grid-cols-2 w-full">

@@ -5,12 +5,20 @@
 @theme {
   --color-primary: #f5e141;
   --color-text-primary: #ff9d00;
-  --font-family-sans: "Montserrat", sans-serif;
+  /* --font-family-sans: "Montserrat", sans-serif; */
+}
+
+@layer utilities {
+  .font-Montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
 }
 
 @layer base {
   html {
-    font-family: var(--font-family-sans);
+    @apply font-Montserrat;
+    scrollbar-width: thin;
+    scrollbar-color: #2d3748 #f1f1f1;
   }
 }
 
