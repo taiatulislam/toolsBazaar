@@ -5,8 +5,6 @@ const NavItems = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location?.pathname || "/");
 
-  console.log("location", location);
-
   useEffect(() => {
     setActiveLink(location?.pathname);
   }, []);
