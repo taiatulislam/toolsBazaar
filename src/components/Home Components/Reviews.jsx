@@ -11,7 +11,7 @@ const reviews = [
   },
   {
     clientReview:
-      "Smooth transactions every time. Munshi Wholesale has a wide range of products at competitive prices. Highly recommend.",
+      "Smooth transactions every time. Tools Bazaar has a wide range of products at competitive prices. Highly recommend.",
     starRating: 4,
     userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
     userName: "JaneSmith",
@@ -31,7 +31,7 @@ const reviews = [
   },
   {
     clientReview:
-      "Munshi Wholesale offers great deals on bulk purchases. Saved me a lot of money for my business.",
+      "Tools Bazaar offers great deals on bulk purchases. Saved me a lot of money for my business.",
     starRating: 4,
     userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
     userName: "DavidClark",
@@ -52,7 +52,7 @@ const reviews = [
   },
   {
     clientReview:
-      "Munshi Wholesale has become my go-to for hardware needs. Reliable service and quality products.",
+      "Tools Bazaar has become my go-to for hardware needs. Reliable service and quality products.",
     userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
     userName: "JenniferLee",
   },
@@ -84,7 +84,7 @@ const reviews = [
   },
   {
     clientReview:
-      "Love the convenience of shopping at Munshi Wholesale. Always find what I need at a good price.",
+      "Love the convenience of shopping at Tools Bazaar. Always find what I need at a good price.",
     userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
     userName: "RyanJohnson",
   },
