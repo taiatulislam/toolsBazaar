@@ -1,11 +1,15 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router";
-import { FaArrowRightFromBracket } from "react-icons/fa6";
-import { HiMenu } from "react-icons/hi";
-import { IoCloseCircleOutline } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router";
 
 const NavItems = () => {
-  const [activeLink, setActiveLink] = useState("/");
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState(location?.pathname || "/");
+
+  console.log("location", location);
+
+  useEffect(() => {
+    setActiveLink(location?.pathname);
+  }, []);
 
   const menuItems = [
     {
@@ -14,19 +18,19 @@ const NavItems = () => {
     },
     {
       label: "Shop",
-      path: "shop",
+      path: "/shop",
     },
     {
       label: "About Us",
-      path: "about",
+      path: "/about",
     },
     {
       label: "FAQ",
-      path: "faq",
+      path: "/faq",
     },
     {
       label: "Contact Us",
-      path: "contact",
+      path: "/contact",
     },
   ];
 
