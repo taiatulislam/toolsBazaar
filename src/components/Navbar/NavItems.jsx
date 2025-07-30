@@ -43,7 +43,7 @@ const NavItems = () => {
               className={`cursor-pointer ${
                 activeLink === item.path
                   ? "border-b-4 border-red-600"
-                  : "border-b-4 border-primary"
+                  : "border-b-4 border-[#fdd835]"
               } ${activeLink === item.path ? "text-red-600" : ""}`}
             >
               <NavLink to={item.path}>{item.label}</NavLink>
