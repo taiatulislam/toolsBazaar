@@ -7,7 +7,7 @@ const NavItems = () => {
 
   useEffect(() => {
     setActiveLink(location?.pathname);
-  }, []);
+  }, [location]);
 
   const menuItems = [
     {

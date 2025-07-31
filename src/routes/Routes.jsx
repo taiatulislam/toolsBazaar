@@ -7,6 +7,7 @@ import Contact from "../page/Contact/Contact";
 import Shop from "../page/Shop/Shop";
 import FAQ from "../page/FAQ/FAQ";
 import Login from "../page/Login/Login";
+import Register from "../page/Register/Register";
 
 const routes = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const routes = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
       },
       {
         path: "shop",
