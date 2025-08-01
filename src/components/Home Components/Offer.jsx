@@ -51,7 +51,7 @@ const Offer = () => {
       </div>
 
       {/* Offer Card */}
-      <div className="grid grid-cols-4 gap-5 mt-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
         {/* Card-01 */}
         <OfferCard
           image={Offer1}

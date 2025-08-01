@@ -33,7 +33,7 @@ const BestSeller = () => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-4 gap-5 my-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 my-10">
         {/* Product-Cards */}
         {data.map((item, index) => (
           <ProductCard key={index} item={item} />

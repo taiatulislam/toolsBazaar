@@ -3,7 +3,7 @@ import React from "react";
 export default function Services() {
   return (
     <div className="my-8 px-5">
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         {serviceItems.map((item) => (
           <Service key={item.id} item={item} />
         ))}

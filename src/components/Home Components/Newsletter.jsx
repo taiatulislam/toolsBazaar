@@ -4,11 +4,11 @@ const Newsletter = () => {
       <div className="container mx-auto py-16">
         <div className="px-8">
           <div className="text-center">
-            <h2 className="text-4xl font-extrabold text-white">
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-white">
               Stay Updated with Our{" "}
               <span className="text-yellow-400">Newsletter</span>
             </h2>
-            <p className="mt-4 text-xl text-gray-300 w-1/2 mx-auto pb-3">
+            <p className="mt-4 text-base lg:text-xl text-gray-300 w-2/3 lg:w-1/2 mx-auto pb-3">
               Subscribe to our newsletter and get the latest news, updates, and
               insights in the world of hardware tech.
             </p>

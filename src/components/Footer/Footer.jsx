@@ -7,49 +7,46 @@ import payment from "../../assets//svg/SSLCOMMERZ.svg";
 export default function Footer() {
   return (
     <footer className="font-[sans-serif] bg-black py-12 font-montserrat bg-[url('https://i.ibb.co/1rwqq8k/footerbg.png')]">
-      <div className="grid container mx-auto grid-cols-5 gap-12 px-5">
-        <div>
-          <div className="">
-            <img className="w-44 mb-4" src={logo} alt="Logo" />
-            <ul className="space-y-5">
-              <li>
-                <a className="text-gray-300 hover:text-white text-[12px]">
-                  {" "}
-                  <p>Bashundhara, Dhaka-1212</p>{" "}
-                </a>
-              </li>
-
-              <li className="text-gray-300 text-[15px] hover:text-red-600  flex items-center gap-1">
+      <div className="grid container mx-auto grid-cols-3 lg:grid-cols-5 gap-12 px-5">
+        <div className="md:row-span-2 row-span-1">
+          <img className="w-44 mb-4" src={logo} alt="Logo" />
+          <ul className="space-y-5">
+            <li>
+              <a className="text-gray-300 hover:text-white text-[12px]">
                 {" "}
-                <span>
-                  <TfiEmail></TfiEmail>
-                </span>{" "}
-                <p className="text-sm">tools****bazaar@gmail.com</p>
-              </li>
+                <p>Bashundhara, Dhaka-1212</p>{" "}
+              </a>
+            </li>
 
-              <li>
-                <a className="text-text-primary text-[15px]">
-                  0000 - 0000 - 0000
-                </a>
-              </li>
-            </ul>
-          </div>
+            <li className="text-gray-300 text-[15px] hover:text-red-600  flex items-center gap-1">
+              {" "}
+              <span>
+                <TfiEmail></TfiEmail>
+              </span>{" "}
+              <p className="text-sm">tools****bazaar@gmail.com</p>
+            </li>
+
+            <li>
+              <a className="text-text-primary text-[15px]">
+                0000 - 0000 - 0000
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <div className="ml-10">
-          <div>
-            <h1 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5 ">
-              Know Us
-            </h1>
-            <ul className="space-y-2">
-              <FooterLink path={"/"}>Home</FooterLink>
-              <FooterLink path={"/aboutUs"}>About Us</FooterLink>
-              <FooterLink path={"/contactUs"}>Contact</FooterLink>
-              <FooterLink path={"/faq"}>FAQ</FooterLink>
-              <FooterLink path={"/blogs"}>Blog</FooterLink>
-            </ul>
-          </div>
+        <div>
+          <h1 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5 ">
+            Know Us
+          </h1>
+          <ul className="space-y-2">
+            <FooterLink path={"/"}>Home</FooterLink>
+            <FooterLink path={"/aboutUs"}>About Us</FooterLink>
+            <FooterLink path={"/contactUs"}>Contact</FooterLink>
+            <FooterLink path={"/faq"}>FAQ</FooterLink>
+            <FooterLink path={"/blogs"}>Blog</FooterLink>
+          </ul>
         </div>
+
         <div>
           <h1 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5">
             Useful Link
@@ -94,7 +91,7 @@ export default function Footer() {
 
       <div className="border-b my-10 border-gray-800 w-full "></div>
 
-      <div className="container mx-auto text-gray-300 text-sm flex justify-between items-center px-5">
+      <div className="container mx-auto text-gray-300 text-sm flex flex-row md:flex-col-reverse lg:flex-row md:gap-5 lg:gap-0s justify-between items-center px-5">
         <p className="text-left">
           &copy; {new Date().getFullYear()} - ToolsBazaar All Right Reserved.
         </p>
