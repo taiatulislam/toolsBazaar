@@ -41,7 +41,7 @@ export default function TopNav() {
 
         <div className="flex items-center gap-6">
           <div className="-mb-2 flex gap-5">
-            <Link to={"/carts"}>
+            <Link to={"/cart"}>
               <TiShoppingCart className="h-6 w-6 text-gray-600" />
             </Link>
 

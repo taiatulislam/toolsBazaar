@@ -8,6 +8,7 @@ import Shop from "../page/Shop/Shop";
 import FAQ from "../page/FAQ/FAQ";
 import Login from "../page/Login/Login";
 import Register from "../page/Register/Register";
+import Carts from "../page/Cart/Cart";
 
 const routes = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const routes = createBrowserRouter([
       {
         path: "shop",
         element: <Shop />,
+      },
+      {
+        path: "cart",
+        element: <Carts />,
       },
       {
         path: "about",
