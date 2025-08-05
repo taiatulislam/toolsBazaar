@@ -24,7 +24,7 @@ const About = () => {
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold tracking-tight">Our Impact</h2>
           <p className="text-lg leading-8 max-w-4xl mx-auto ">
-            Discover key insights into Munshi Wholesale&apos;s performance and
+            Discover key insights into Tools Bazaar&apos;s performance and
             impact. From years in business to the number of customers served,
             explore our accomplishments and the scale of our operations.
           </p>
@@ -89,16 +89,16 @@ const aboutUsContent = {
   imagePosition: "right",
   paragraphs: [
     {
-      text: "Welcome to Munshi Wholesale, your one-stop destination for high-quality hardware tools at wholesale prices. Established in May 2022 in the UK and expanding to the USA in October 2023, we've quickly become a trusted name in the industry.",
+      text: "Welcome to Tools Bazaar, your one-stop destination for high-quality hardware tools at wholesale prices. Established in May 2022 in the UK and expanding to the USA in October 2023, we've quickly become a trusted name in the industry.",
     },
     {
-      text: "At Munshi Wholesale, we offer a wide range of power tools, hand tools, safety equipment, and accessories to meet your every need. Our commitment to customer satisfaction and competitive pricing has built our reputation for reliability and integrity.",
+      text: "At Tools Bazaar, we offer a wide range of power tools, hand tools, safety equipment, and accessories to meet your every need. Our commitment to customer satisfaction and competitive pricing has built our reputation for reliability and integrity.",
     },
     {
       text: "We pride ourselves on sourcing the best products from leading manufacturers worldwide, ensuring every item meets our strict quality standards. With our personalized approach to customer service, your experience with us is nothing short of exceptional.",
     },
     {
-      text: "Thank you for choosing Munshi Wholesale as your trusted hardware tool supplier. We're here to help you achieve your goals, one tool at a time.",
+      text: "Thank you for choosing Tools Bazaar as your trusted hardware tool supplier. We're here to help you achieve your goals, one tool at a time.",
     },
   ],
 };
@@ -108,19 +108,19 @@ const ourStoryContent = {
   imagePosition: "left",
   paragraphs: [
     {
-      text: "In May 2022, Munshi Wholesale began its journey in the UK, driven by passion and dedication to redefine the wholesale hardware industry.",
+      text: "In May 2022, Tools Bazaar began its journey in the UK, driven by passion and dedication to redefine the wholesale hardware industry.",
     },
     {
       text: "With each passing day, our reputation for quality and reliability grew, earning us the trust of customers across the UK.",
     },
     {
-      text: "In October 2023, Munshi Wholesale expanded to the USA, introducing our values and expertise to a new audience.",
+      text: "In October 2023, Tools Bazaar expanded to the USA, introducing our values and expertise to a new audience.",
     },
     {
       text: "Despite challenges, we remained committed to providing unparalleled value and service, strengthening our presence in the USA.",
     },
     {
-      text: "Today, Munshi Wholesale stands as a testament to perseverance, innovation, and unwavering commitment to customer satisfaction.",
+      text: "Today, Tools Bazaar stands as a testament to perseverance, innovation, and unwavering commitment to customer satisfaction.",
     },
     {
       text: "Join us in building a brighter future, one tool at a time.",
@@ -133,7 +133,7 @@ const ourMissionContent = {
   imagePosition: "right",
   paragraphs: [
     {
-      text: "At Munshi Wholesale, our mission is simple yet profound: to empower individuals, businesses, and communities with access to high-quality hardware tools at wholesale prices.",
+      text: "At Tools Bazaar, our mission is simple yet profound: to empower individuals, businesses, and communities with access to high-quality hardware tools at wholesale prices.",
     },
     {
       text: "We are dedicated to providing our customers with a seamless shopping experience, offering a wide range of products meticulously sourced from top manufacturers around the globe.",
