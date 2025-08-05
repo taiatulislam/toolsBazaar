@@ -10,6 +10,7 @@ import Login from "../page/Login/Login";
 import Register from "../page/Register/Register";
 import Carts from "../page/Cart/Cart";
 import Wishlist from "../page/Wishlist/Wishlist";
+import ProductDetails from "../page/ProductDetails/ProductDetails";
 
 const routes = createBrowserRouter([
   {
@@ -34,12 +35,16 @@ const routes = createBrowserRouter([
         element: <Shop />,
       },
       {
+        path: "shop/:id",
+        element: <ProductDetails />,
+      },
+      {
         path: "cart",
         element: <Carts />,
       },
       {
         path: "wishlist",
-        element: <Wishlist/>,
+        element: <Wishlist />,
       },
       {
         path: "about",

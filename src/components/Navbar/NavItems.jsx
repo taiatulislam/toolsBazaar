@@ -37,16 +37,18 @@ const NavItems = () => {
       <div className="container mx-auto flex justify-between items-center nav-container h-full px-5">
         <ul className="flex items-center gap-10 py-3">
           {menuItems?.map((item, index) => (
-            <li
-              key={index}
-              onClick={() => setActiveLink(item.path)}
-              className={`cursor-pointer ${
-                activeLink === item.path
-                  ? "border-b-4 border-red-600"
-                  : "border-b-4 border-[#fdd835]"
-              } ${activeLink === item.path ? "text-red-600" : ""}`}
-            >
-              <NavLink to={item.path}>{item.label}</NavLink>
+            <li key={index}>
+              <NavLink
+                to={item.path}
+                onClick={() => setActiveLink(item.path)}
+                className={`cursor-pointer ${
+                  activeLink === item.path
+                    ? "border-b-4 border-red-600"
+                    : "border-b-4 border-[#fdd835]"
+                } ${activeLink === item.path ? "text-red-600" : ""}`}
+              >
+                {item.label}
+              </NavLink>
             </li>
           ))}
         </ul>

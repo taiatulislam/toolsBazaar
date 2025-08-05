@@ -1,8 +1,11 @@
 import { FaStar, FaShoppingCart, FaHeart } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 const ProductCard = ({ item }) => {
+  const navigate = useNavigate();
+
   return (
-    <div>
+    <div onClick={() => navigate("/shop/1")}>
       <div className="relative flex items-center rounded-lg border-2 border-gray-200 group aspect-square">
         <div className="w-full h-full flex items-center justify-center cursor-pointer">
           <img
