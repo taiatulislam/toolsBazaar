@@ -1,11 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const NavItems = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location?.pathname || "/");
-  const { user } = useContext(AuthContext) || {};
+  const { user, setUser, logOut } = useContext(AuthContext) || {};
 
   useEffect(() => {
     setActiveLink(location?.pathname);
@@ -33,6 +34,29 @@ const NavItems = () => {
       path: "/contact",
     },
   ];
+
+  const handleLogOut = () => {
+    Swal.fire({
+      title: "Are you sure you want to Logout?",
+      icon: "warning",
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+      showCancelButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        logOut();
+        setUser(null);
+        localStorage.removeItem("user");
+        Swal.fire({
+          title: "Logout!",
+          text: "You successfully Logout.",
+          icon: "success",
+          timer: 3000,
+        });
+      }
+    });
+  };
 
   return (
     <nav className="bg-[#fdd835] h-[60px]">
@@ -66,12 +90,10 @@ const NavItems = () => {
         >
           {user ? (
             <button
+              onClick={handleLogOut}
               className="flex items-center justify-center w-[100%]"
-              to={"/login"}
             >
-              <button className="text-lg text-white cursor-pointer">
-                Logout
-              </button>
+              <p className="text-lg text-white cursor-pointer">Logout</p>
             </button>
           ) : (
             <Link
