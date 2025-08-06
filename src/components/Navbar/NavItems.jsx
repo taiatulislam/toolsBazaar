@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const NavItems = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location?.pathname || "/");
+  const { user } = useContext(AuthContext) || {};
 
   useEffect(() => {
     setActiveLink(location?.pathname);
@@ -62,12 +64,25 @@ const NavItems = () => {
             clipPath: "polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%)",
           }}
         >
-          <Link
-            className="flex items-center justify-center w-[100%]"
-            to={"/login"}
-          >
-            <button className="text-lg text-white cursor-pointer">Login</button>
-          </Link>
+          {user ? (
+            <button
+              className="flex items-center justify-center w-[100%]"
+              to={"/login"}
+            >
+              <button className="text-lg text-white cursor-pointer">
+                Logout
+              </button>
+            </button>
+          ) : (
+            <Link
+              className="flex items-center justify-center w-[100%]"
+              to={"/login"}
+            >
+              <button className="text-lg text-white cursor-pointer">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </nav>

@@ -4,8 +4,12 @@ import logo from "../../assets/logo.png";
 import { TiShoppingCart } from "react-icons/ti";
 import { FaHeart } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 export default function TopNav() {
+  const { user } = useContext(AuthContext) || {};
+
   return (
     <div className="bg-gray-200">
       <div className="container mx-auto py-4 flex justify-between items-center flex-wrap px-5">
@@ -49,7 +53,7 @@ export default function TopNav() {
               <FaHeart className="h-6 w-6 text-gray-600" />
             </Link>
 
-            <FaRegCircleUser className="h-6 w-6 text-gray-600" />
+            {user && <FaRegCircleUser className="h-6 w-6 text-gray-600" />}
           </div>
         </div>
       </div>
