@@ -1,5 +1,3 @@
-import React from "react";
-import { Outlet } from "react-router";
 import Banner from "../../components/Banner";
 import Services from "../../components/Home Components/Services";
 import Category from "../../components/Home Components/Category";

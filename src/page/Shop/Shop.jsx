@@ -7,69 +7,73 @@ import Featured3 from "../../assets/featured/featured-3.jpg";
 import Featured4 from "../../assets/featured/featured-4.jpg";
 
 import "./Shop.css";
+import SectionBanner from "../../components/SectionBanner";
 
 const Shop = () => {
   const [showAllCategories, setShowAllCategories] = useState(false);
   const [showAllBrands, setShowAllBrands] = useState(false);
 
   return (
-    <div className="flex mx-auto relative">
-      {/* Sidebar Start */}
-      <aside className="min-w-96 h-[calc(100dvh-100px)] overflow-y-auto scrollbar-hide bg-white px-10 pb-10">
-        {/* Category Filter */}
-        <TypeFilter
-          title="Filter by category"
-          data={categories}
-          showAll={showAllCategories}
-          setShowAll={setShowAllCategories}
-        />
+    <>
+      <SectionBanner title={"Collection"} subTitle={"Shop / Products"} />
+      <div className="flex mx-auto relative">
+        {/* Sidebar Start */}
+        <aside className="min-w-96 h-[calc(100dvh-100px)] overflow-y-auto scrollbar-hide bg-white px-10 pb-10">
+          {/* Category Filter */}
+          <TypeFilter
+            title="Filter by category"
+            data={categories}
+            showAll={showAllCategories}
+            setShowAll={setShowAllCategories}
+          />
 
-        {/* Brand Filter */}
-        <TypeFilter
-          title="Filter by brands"
-          data={brands}
-          showAll={showAllBrands}
-          setShowAll={setShowAllBrands}
-        />
+          {/* Brand Filter */}
+          <TypeFilter
+            title="Filter by brands"
+            data={brands}
+            showAll={showAllBrands}
+            setShowAll={setShowAllBrands}
+          />
 
-        {/* Price Filter */}
-        <div className="py-3">
-          <h2 className="text-lg font-semibold text-gray-800 pb-2 border-b border-gray-200">
-            Set Price Range
-          </h2>
+          {/* Price Filter */}
+          <div className="py-3">
+            <h2 className="text-lg font-semibold text-gray-800 pb-2 border-b border-gray-200">
+              Set Price Range
+            </h2>
 
-          <div className="space-y-1 my-2">
-            <div className="flex items-center gap-2">
-              <input
-                type="number"
-                id="minPrice"
-                placeholder="Min"
-                className="w-full rounded-md border border-gray-300 py-2 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
-              />
-              <input
-                type="number"
-                id="maxPrice"
-                placeholder="Max"
-                className="w-full rounded-md border border-gray-300 py-2 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
-              />
+            <div className="space-y-1 my-2">
+              <div className="flex items-center gap-2">
+                <input
+                  type="number"
+                  id="minPrice"
+                  placeholder="Min"
+                  className="w-full rounded-md border border-gray-300 py-2 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                />
+                <input
+                  type="number"
+                  id="maxPrice"
+                  placeholder="Max"
+                  className="w-full rounded-md border border-gray-300 py-2 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                />
+              </div>
             </div>
-          </div>
 
-          <button className="w-full text-white bg-gray-800 hover:bg-gray-900 focus:outline-none font-medium rounded-md py-2 px-4">
-            Apply
-          </button>
-        </div>
-      </aside>
-
-      {/* Product Grid */}
-      <main className="w-full h-[calc(100dvh-6rem)] overflow-y-auto scrollbar-hide px-10 pt-5 grid grid-cols-4 gap-[3%]">
-        {products?.map((product, index) => (
-          <div key={index} className="pb-5">
-            <ProductCard item={product} />
+            <button className="w-full text-white bg-gray-800 hover:bg-gray-900 focus:outline-none font-medium rounded-md py-2 px-4">
+              Apply
+            </button>
           </div>
-        ))}
-      </main>
-    </div>
+        </aside>
+
+        {/* Product Grid */}
+        <main className="w-full h-[calc(100dvh-6rem)] overflow-y-auto scrollbar-hide px-10 pt-5 grid grid-cols-4 gap-[3%]">
+          {products?.map((product, index) => (
+            <div key={index} className="pb-5">
+              <ProductCard item={product} />
+            </div>
+          ))}
+        </main>
+      </div>
+    </>
   );
 };
 

@@ -1,12 +1,91 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import backgroundPattern from "../../assets/background/login-pattern.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(true);
   const [formData, setFormData] = useState({});
+  const { createUser, googleLogin, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    if (!formData?.email || !formData?.password) {
+      Swal.fire({
+        position: "top-center",
+        icon: "error",
+        title: "Email and password are required",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
+    }
+    if (formData.password.length < 6) {
+      Swal.fire({
+        position: "top-center",
+        icon: "error",
+        title: "Password must be at least 6 characters",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
+    }
+
+    try {
+      await createUser(formData.email, formData.password);
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "User Create Successfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      navigate("/login", {
+        state: {
+          email: formData?.email,
+          password: formData?.password,
+        },
+      });
+    } catch (error) {
+      console.error(error.code, error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const hadleGoogleLogin = () => {
+    googleLogin().then(async (res) => {
+      const loggedUser = res.user;
+      const fullName = loggedUser?.displayName;
+      const email = loggedUser?.email;
+      const profilePhoto = loggedUser?.photoURL;
+
+      const userData = {
+        fullName,
+        email,
+        profilePhoto,
+      };
+
+      setUser(userData);
+      localStorage.setItem("user", JSON.stringify(userData));
+
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Login Successfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      navigate("/");
+    });
+  };
 
   const handleOnChange = (name, value) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -22,7 +101,10 @@ export default function Register() {
 
         {/* social login buttons  */}
         <div>
-          <button className="flex justify-center items-center gap-2 shadow-sm border border-[#ddd] py-3 w-full rounded-lg cursor-pointer">
+          <button
+            onClick={hadleGoogleLogin}
+            className="flex justify-center items-center gap-2 shadow-sm border border-[#ddd] py-3 w-full rounded-lg cursor-pointer"
+          >
             <FcGoogle />
             <span>Google</span>
           </button>
@@ -36,7 +118,7 @@ export default function Register() {
         </div>
 
         {/* register form  */}
-        <form>
+        <form onSubmit={handleSubmit}>
           {/* full name field  */}
           <div className="relative float-label-input pb-4">
             <input
@@ -88,6 +170,7 @@ export default function Register() {
           {/* register button  */}
           <button
             type="submit"
+            disabled={isLoading}
             className="bg-[#FFBA00] w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
           >
             Register

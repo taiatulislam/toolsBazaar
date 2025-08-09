@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { useContext, useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import backgroundPattern from "../../assets/background/login-pattern.png";
@@ -8,9 +8,16 @@ import Swal from "sweetalert2";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(true);
-  const { googleLogin, setUser } = useContext(AuthContext) || {};
+  const { googleLogin, signInUser, setUser } = useContext(AuthContext) || {};
   const [formData, setFormData] = useState({});
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location?.state) {
+      setFormData(location?.state);
+    }
+  }, []);
 
   const handleOnChange = (name, value) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -44,6 +51,27 @@ export default function Login() {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    signInUser(formData?.email, formData?.password)
+      .then(() => {
+        setUser(formData);
+        localStorage.setItem("user", JSON.stringify(formData));
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "Login Successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div
       className={`flex justify-center items-center min-h-screen`}
@@ -71,7 +99,7 @@ export default function Login() {
         </div>
 
         {/* register form  */}
-        <form>
+        <form onSubmit={handleSubmit}>
           {/* email field */}
           <div className="relative float-label-input pb-4">
             <input

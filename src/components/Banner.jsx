@@ -4,8 +4,11 @@ import bg1 from "../../src/assets/banner/bg1.png";
 import Img2 from "../../src/assets/banner/yellow-tools-kit-1.png";
 import bg2 from "../../src/assets/banner/bg2.png";
 import Img3 from "../../src/assets/banner/yellow-chainsaw1.png";
+import { useNavigate } from "react-router";
 
 const Banner = () => {
+  const navigate = useNavigate();
+
   const bannerData = [
     {
       id: 1,
@@ -40,14 +43,14 @@ const Banner = () => {
     speed: 1000,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     cssEase: "ease-in-out",
-    pauseOnHover: true,
-    pauseOnFocus: true,
+    pauseOnHover: false,
+    pauseOnFocus: false,
   };
 
   return (
-    <div className="mt-2 drop-shadow rounded-3xl">
+    <div className="mt-2 drop-shadow rounded-3xl px-5">
       <Slider {...settings}>
         {bannerData.map((data) => (
           <div key={data?.id}>
@@ -75,6 +78,7 @@ const Banner = () => {
                   </h1>
                   <div>
                     <button
+                      onClick={() => navigate("/shop")}
                       className={`bg-[#fdc62e]/90 text-black cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full`}
                     >
                       Shop By Category
