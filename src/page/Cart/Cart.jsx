@@ -3,9 +3,12 @@ import CartCard from "./CartCard";
 import Featured1 from "../../assets/featured/featured-1.jpg";
 import Featured2 from "../../assets/featured/featured-2.jpg";
 import Featured3 from "../../assets/featured/featured-3.jpg";
+import { useState } from "react";
 
 const Carts = () => {
-  const { totalQuantity, totalPrice } = myCarts.reduce(
+const [carts, setCarts] = useState(myCarts)
+
+  const { totalQuantity, totalPrice } = carts.reduce(
     (acc, item) => {
       acc.totalQuantity += item.quantity;
       acc.totalPrice += item.unit_price * item.quantity;
@@ -28,14 +31,14 @@ const Carts = () => {
           </div>
         </div>
         <div className="flex-1 grid grid-cols-1 gap-0">
-          {myCarts?.length === 0 ? (
+          {carts?.length === 0 ? (
             <div className="text-center my-20">
               <p className=" my-10">Your cart is empty.</p>
             </div>
           ) : (
             <>
-              {myCarts?.map((item) => (
-                <CartCard cart={item} />
+              {carts?.map((item) => (
+                <CartCard cart={item} setCarts={setCarts} />
               ))}
 
               <div className="flex items-center justify-around gap-4 mb-3 mt-5">
@@ -63,18 +66,21 @@ const Carts = () => {
 
 const myCarts = [
   {
+    id:1,
     product_image: Featured1,
     title: "Digital Multimeter",
     unit_price: 29.99,
     quantity: 2,
   },
   {
+    id:2,
     product_image: Featured2,
     title: "Hydraulic Car Jack",
     unit_price: 26.999,
     quantity: 1,
   },
   {
+    id:3,
     product_image: Featured3,
     title: "Cordless Drill Set",
     unit_price: 39.99,
