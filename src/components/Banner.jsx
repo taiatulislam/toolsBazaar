@@ -50,7 +50,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="mt-2 drop-shadow rounded-3xl px-5">
+    <div className="mt-2 drop-shadow rounded-3xl lg:px-5">
       <Slider {...settings}>
         {bannerData.map((data) => (
           <div key={data?.id}>

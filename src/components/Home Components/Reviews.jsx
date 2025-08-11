@@ -122,7 +122,7 @@ export default function Reviews() {
   return (
     <div className="py-14 px-5 mx-auto">
       <div className="flex flex-col items-center justify-center mt-10 mb-2">
-        <h2 className="text-4xl font-bold montserrat text-center mb-3 text-nowrap">
+        <h2 className="text-xl md:text-3xl lg:text-4xl font-bold montserrat text-center mb-3 text-nowrap">
           What Our Customers Are Saying
         </h2>
         <svg

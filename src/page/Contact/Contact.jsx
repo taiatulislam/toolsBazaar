@@ -16,8 +16,8 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 mt-10">
-          <div className="container mx-auto h-[500px] rounded-lg col-span-2">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+          <div className="container mx-auto h-[500px] rounded-lg colspan-1 lg:col-span-2">
             <iframe
               className="w-full h-full"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.660451257071!2d90.42549751538485!3d23.762873394094117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7a39e0e4fc1%3A0x2fc04b0a4f841063!2sBashundhara%20Residential%20Area%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1722257501000!5m2!1sen!2sbd"
@@ -55,8 +55,8 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="flex items-end justify-center gap-7 mx-auto container py-15 bg-white px-5">
-        <img src={messageImg1} alt="Conatct" className="h-[450px] block" />
+      <div className="flex items-center lg:items-end justify-center gap-7 mx-auto container py-15 bg-white px-5">
+        <img src={messageImg1} alt="Conatct" className="h-[250px] lg:h-[450px] block" />
         <div>
           <h1 className="text-3xl text-[#333] font-extrabold text-center">
             Leave a message

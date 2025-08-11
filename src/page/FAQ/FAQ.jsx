@@ -25,13 +25,13 @@ const FAQ = () => {
     : faqs.flat();
 
   return (
-    <div className="container px-6 py-12 mx-auto">
+    <div className="container px-5 py-12 mx-auto">
       <h1 className="text-3xl font-semibold text-center text-gray-800">
         Have any Questions?
       </h1>
 
       <div className="mt-16 flex">
-        <div className="mx-12">
+        <div className="mx-2 lg:mx-12">
           <h1 className="text-xl font-semibold text-gray-800">
             Table of Content
           </h1>
@@ -85,7 +85,7 @@ const FAQ = () => {
                         d="M20 12H4"
                       ></path>
                     </svg>
-                    <h1 className="mx-4 text-xl text-gray-700 text-start">
+                    <h1 className="mx-4 text-base lg:text-xl text-gray-700 text-start">
                       {question.question}
                     </h1>
                   </button>
@@ -93,7 +93,7 @@ const FAQ = () => {
                   {isOpen && selectedQuestion === question.question && (
                     <div className="flex pl-0 my-7 mx-10">
                       <span className="border border-red-600"></span>
-                      <p className="max-w-3xl text-lg px-4 text-gray-600">
+                      <p className="max-w-3xl text-sm lg:text-lg px-4 text-gray-600">
                         {question.answer}
                       </p>
                     </div>

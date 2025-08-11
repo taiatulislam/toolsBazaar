@@ -11,7 +11,7 @@ const BestSeller = () => {
     <div className="mt-20 px-5">
       <div className="relative">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="text-4xl font-bold montserrat text-center mb-3">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold montserrat text-center mb-3">
             Pick Our Best One
           </h2>
           <svg

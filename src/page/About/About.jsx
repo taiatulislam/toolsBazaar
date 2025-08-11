@@ -23,7 +23,7 @@ const About = () => {
       <div className="pb-15">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold tracking-tight">Our Impact</h2>
-          <p className="text-lg leading-8 max-w-4xl mx-auto ">
+          <p className="text-sm lg:text-lg lg:leading-8 max-w-4xl mx-auto ">
             Discover key insights into Tools Bazaar&apos;s performance and
             impact. From years in business to the number of customers served,
             explore our accomplishments and the scale of our operations.
@@ -35,8 +35,10 @@ const About = () => {
               key={index}
               className="flex flex-col bg-black/5 p-8 rounded-2xl"
             >
-              <dt className="text-sm font-semibold leading-6">{stat.label}</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight">
+              <dt className="text-sm font-semibold">
+                {stat.label}
+              </dt>
+              <dd className="order-first text-xl lg:text-3xl font-semibold">
                 {stat.value}
               </dd>
             </div>
@@ -68,7 +70,10 @@ const AboutSection = ({
           {title}
         </h2>
         {paragraphs.map((p, i) => (
-          <p className="text-lg font-medium leading-8 mb-5" key={i}>
+          <p
+            className="text-sm lg:text-lg font-medium leading-8 mb-5"
+            key={i}
+          >
             {p.text}
           </p>
         ))}
@@ -87,6 +92,7 @@ const AboutSection = ({
 const aboutUsContent = {
   image: au1,
   imagePosition: "right",
+  title: "About Us",
   paragraphs: [
     {
       text: "Welcome to Tools Bazaar, your one-stop destination for high-quality hardware tools at wholesale prices. Established in May 2022 in the UK and expanding to the USA in October 2023, we've quickly become a trusted name in the industry.",
@@ -106,6 +112,7 @@ const aboutUsContent = {
 const ourStoryContent = {
   image: ourStoryImg1,
   imagePosition: "left",
+  title: "Our Story",
   paragraphs: [
     {
       text: "In May 2022, Tools Bazaar began its journey in the UK, driven by passion and dedication to redefine the wholesale hardware industry.",
@@ -131,6 +138,7 @@ const ourStoryContent = {
 const ourMissionContent = {
   image: ourMissionImg1,
   imagePosition: "right",
+  title: "Our Mission",
   paragraphs: [
     {
       text: "At Tools Bazaar, our mission is simple yet profound: to empower individuals, businesses, and communities with access to high-quality hardware tools at wholesale prices.",

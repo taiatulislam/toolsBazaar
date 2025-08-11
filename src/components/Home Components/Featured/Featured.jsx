@@ -36,7 +36,7 @@ const Featured = () => {
   return (
     <div className="my-20 px-5">
       <div className="flex flex-col items-center justify-center mb-10">
-        <h2 className="text-4xl font-bold montserrat text-center mb-3">
+        <h2 className="text-xl md:text-3xl lg:text-4xl font-bold montserrat text-center mb-3">
           Featured
         </h2>
         <svg
