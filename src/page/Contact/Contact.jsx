@@ -16,7 +16,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           <div className="container mx-auto h-[500px] rounded-lg colspan-1 lg:col-span-2">
             <iframe
               className="w-full h-full"
@@ -55,8 +55,12 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="flex items-center lg:items-end justify-center gap-7 mx-auto container py-15 bg-white px-5">
-        <img src={messageImg1} alt="Conatct" className="h-[250px] lg:h-[450px] block" />
+      <div className="flex flex-col md:flex-row items-center lg:items-end justify-center gap-7 mx-auto container py-15 bg-white px-5">
+        <img
+          src={messageImg1}
+          alt="Conatct"
+          className="h-[250px] lg:h-[450px] block"
+        />
         <div>
           <h1 className="text-3xl text-[#333] font-extrabold text-center">
             Leave a message

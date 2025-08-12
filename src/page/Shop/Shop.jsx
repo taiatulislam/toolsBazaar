@@ -18,7 +18,7 @@ const Shop = () => {
       <SectionBanner title={"Collection"} subTitle={"Shop / Products"} />
       <div className="flex mx-auto relative">
         {/* Sidebar Start */}
-        <aside className="min-w-10 lg:min-w-96 h-[calc(100dvh-100px)] overflow-y-auto scrollbar-hide bg-white px-5 lg:px-10 pb-10">
+        <aside className="hidden md:block min-w-10 lg:min-w-96 h-[calc(100dvh-100px)] overflow-y-auto scrollbar-hide bg-white px-5 lg:px-10 pb-10">
           {/* Category Filter */}
           <TypeFilter
             title="Filter by category"
@@ -65,7 +65,7 @@ const Shop = () => {
         </aside>
 
         {/* Product Grid */}
-        <main className="w-full h-[calc(100dvh-6rem)] overflow-y-auto scrollbar-hide px-10 pt-5 grid grid-cols-2 lg:grid-cols-4 gap-[3%]">
+        <main className="w-full h-[calc(100dvh-6rem)] overflow-y-auto scrollbar-hide px-2 md:px-10 pt-5 grid grid-cols-2 lg:grid-cols-4 gap-[3%]">
           {products?.map((product, index) => (
             <div key={index} className="pb-5">
               <ProductCard item={product} />

@@ -56,7 +56,7 @@ const Banner = () => {
           <div key={data?.id}>
             {/* Banner section */}
             <div
-              className="p-20 overflow-hidden rounded-[16px] min-h-[650px] hero-bg-color flex justify-center items-center"
+              className="p-5 md:p-20 overflow-hidden rounded-[16px] min-h-[450px] md:min-h-[650px] hero-bg-color flex justify-center items-center"
               style={{
                 backgroundImage: `url(${data?.bg})`,
                 backgroundSize: "cover",

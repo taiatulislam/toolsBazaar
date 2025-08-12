@@ -7,9 +7,9 @@ import payment from "../../assets//svg/SSLCOMMERZ.svg";
 export default function Footer() {
   return (
     <footer className="font-[sans-serif] bg-black py-12 font-montserrat bg-[url('https://i.ibb.co/1rwqq8k/footerbg.png')]">
-      <div className="grid container mx-auto grid-cols-3 lg:grid-cols-5 gap-12 px-5">
-        <div className="md:row-span-2 row-span-1">
-          <img className="w-44 mb-4" src={logo} alt="Logo" />
+      <div className="grid container mx-auto grid-cols-3 lg:grid-cols-5 gap-5 md:gap-12 px-5">
+        <div className="col-span-2 md:row-span-2">
+          <img className="w-[150px] md:w-44 mb-4" src={logo} alt="Logo" />
           <ul className="space-y-5">
             <li>
               <a className="text-gray-300 hover:text-white text-[12px]">
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h1 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5 ">
+          <h1 className="text-text-primary text-base md:text-lg font-bold mb-5 font-montserrat mt-5 ">
             Know Us
           </h1>
           <ul className="space-y-2">
@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h1 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5">
+          <h1 className="text-text-primary text-base md:text-lg font-bold mb-5 font-montserrat mt-5">
             Useful Link
           </h1>
           <ul className="space-y-2">
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5">
+          <h4 className="text-text-primary text-base md:text-lg font-bold mb-5 font-montserrat mt-5">
             Information
           </h4>
           <ul className="space-y-2">
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-text-primary text-lg font-bold mb-5 font-montserrat mt-5 ">
+          <h4 className="text-text-primary text-base md:text-lg font-bold mb-5 font-montserrat mt-5 ">
             Special Offers
           </h4>
           <ul className="space-y-2">
@@ -91,13 +91,13 @@ export default function Footer() {
 
       <div className="border-b my-10 border-gray-800 w-full "></div>
 
-      <div className="container mx-auto text-gray-300 text-sm flex flex-row md:flex-col-reverse lg:flex-row md:gap-5 lg:gap-0s justify-between items-center px-5">
+      <div className="container mx-auto text-gray-300 text-sm flex flex-col-reverse lg:flex-row gap-5 lg:gap-0 justify-between items-center px-5">
         <p className="text-left">
           &copy; {new Date().getFullYear()} - ToolsBazaar All Right Reserved.
         </p>
-        <div className="flex justify-end items-center gap-2">
+        <div className="flex flex-col md:flex-row justify-end items-center gap-2">
           <p>We Accepted</p>
-          <img className="w-md mx-auto" src={payment} alt="" />
+          <img className="u-[90%] md:w-md mx-auto" src={payment} alt="" />
         </div>
       </div>
     </footer>

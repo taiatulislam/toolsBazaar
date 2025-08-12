@@ -9,7 +9,7 @@ import { Link } from "react-router";
 const Category = () => {
   return (
     <div className="px-5">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* 1st col */}
         <CategoryCard
           title={"Automotive Tools"}
@@ -23,7 +23,7 @@ const Category = () => {
           bgcolor={"#fdc62e"}
         />
         {/* 3rd col */}
-        <div className="col-span-2">
+        <div className="col-span-1 md:col-span-2">
           <CategoryCard
             title={"Hand Tools"}
             image={Image3}
@@ -32,9 +32,9 @@ const Category = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
         {/* 4th col */}
-        <div className="col-span-2">
+        <div className="col-span-1 md:col-span-2">
           <CategoryCard
             title={"Electrical Equipment"}
             image={Image4}

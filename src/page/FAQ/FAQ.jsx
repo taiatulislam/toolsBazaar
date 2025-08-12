@@ -31,7 +31,7 @@ const FAQ = () => {
       </h1>
 
       <div className="mt-16 flex">
-        <div className="mx-2 lg:mx-12">
+        <div className="hidden md:block mx-2 lg:mx-12">
           <h1 className="text-xl font-semibold text-gray-800">
             Table of Content
           </h1>

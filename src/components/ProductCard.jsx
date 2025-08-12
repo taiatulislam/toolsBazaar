@@ -35,8 +35,8 @@ const ProductCard = ({ item }) => {
         </div>
       </div>
       <div className="mt-5 px-2">
-        <h2 className="text-xl montserrat">{item.title}</h2>
-        <p className="text-lg my-3 text-black montserrat">
+        <h2 className="text-base md:text-xl montserrat">{item.title}</h2>
+        <p className="text-base md:text-lg my-1.5 md:my-3 text-black montserrat">
           <FaStar className="inline mr-2" />
           <FaStar className="inline mr-2" />
           <FaStar className="inline mr-2" />
@@ -45,18 +45,18 @@ const ProductCard = ({ item }) => {
         </p>
         {item.offer?.discount === "N/A" ? (
           <div>
-            <p className="text-3xl font-bold">$ {item.price}</p>
+            <p className="text-xl md:text-3xl font-bold">$ {item.price}</p>
           </div>
         ) : (
           <div className="flex items-center gap-5">
-            <p className="text-3xl font-bold">
+            <p className="text-xl md:text-3xl font-bold">
               ${" "}
               {(
                 item.price -
                 (item.price * parseInt(item.offer?.discount)) / 100
               ).toFixed(2)}
             </p>
-            <p className="text-xl line-through">$ {item.price}</p>
+            <p className="text-base md:text-xl line-through">$ {item.price}</p>
           </div>
         )}
       </div>

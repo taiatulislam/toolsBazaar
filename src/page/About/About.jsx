@@ -35,9 +35,7 @@ const About = () => {
               key={index}
               className="flex flex-col bg-black/5 p-8 rounded-2xl"
             >
-              <dt className="text-sm font-semibold">
-                {stat.label}
-              </dt>
+              <dt className="text-sm font-semibold">{stat.label}</dt>
               <dd className="order-first text-xl lg:text-3xl font-semibold">
                 {stat.value}
               </dd>
@@ -70,10 +68,7 @@ const AboutSection = ({
           {title}
         </h2>
         {paragraphs.map((p, i) => (
-          <p
-            className="text-sm lg:text-lg font-medium leading-8 mb-5"
-            key={i}
-          >
+          <p className="text-sm lg:text-lg font-medium leading-8 mb-5" key={i}>
             {p.text}
           </p>
         ))}
@@ -169,7 +164,7 @@ const Clients = () => {
         <h2 className="mb-10 text-3xl font-bold leading-tight text-center">
           Our Clients
         </h2>
-        <div className="grid grid-cols-6 text-gray-500 gap-12">
+        <div className="grid grid-cols-3 md:grid-cols-6 text-gray-500 gap-12">
           <a href="#" className="flex justify-center items-center">
             <svg
               className="h-9 hover:text-gray-900"

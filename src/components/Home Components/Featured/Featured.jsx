@@ -52,9 +52,9 @@ const Featured = () => {
         </svg>
       </div>
 
-      <div className="flex flex-row  gap-5 rounded-lg p-5 border-2 border-gray-200">
+      <div className="flex flex-col md:flex-row  gap-5 rounded-lg p-5 border-2 border-gray-200">
         {/* Left: Image Carousel */}
-        <div className="text-center w-1/2 flex items-center justify-center">
+        <div className="text-center w-full md:w-1/2 flex items-center justify-center">
           <Slider {...settings} className="w-full h-full">
             {featuredProducts?.map((product, index) => (
               <div key={index}>
@@ -69,7 +69,7 @@ const Featured = () => {
         </div>
 
         {/* Right: Product Info */}
-        <div className="w-1/2 flex flex-col justify-center">
+        <div className="w-full md:w-1/2 flex flex-col justify-center">
           <h2 className="text-2xl lg:text-3xl font-bold flex-wrap">
             {selectedProduct?.title}
           </h2>

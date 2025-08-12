@@ -26,7 +26,7 @@ const BestSeller = () => {
             <path fill="#fdc62e" d="M0 139.474H290.658V151.185H0z"></path>
           </svg>
         </div>
-        <Link to="/shop" className="absolute right-0 top-0 block">
+        <Link to="/shop" className="absolute right-0 top-0 hidden md:block">
           <button className="bg-yellow-400 py-2 px-4 rounded-lg font-medium">
             Show All
           </button>
