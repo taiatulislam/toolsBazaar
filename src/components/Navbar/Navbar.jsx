@@ -95,7 +95,7 @@ export default function Navbar() {
       </div>
 
       <nav className="bg-[#fdd835] h-[60px]">
-        <div className="flex justify-between items-center h-full px-2 lg:px-5">
+        <div className="flex md:hidden justify-between items-center h-full px-2 lg:px-5">
           <div className="w-[90%]">
             <div className="flex items-center">
               <input
