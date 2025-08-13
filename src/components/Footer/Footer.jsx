@@ -7,8 +7,8 @@ import payment from "../../assets//svg/SSLCOMMERZ.svg";
 export default function Footer() {
   return (
     <footer className="font-[sans-serif] bg-black py-12 font-montserrat bg-[url('https://i.ibb.co/1rwqq8k/footerbg.png')]">
-      <div className="grid container mx-auto grid-cols-3 lg:grid-cols-5 gap-5 md:gap-12 px-5">
-        <div className="col-span-2 md:row-span-2">
+      <div className="grid container mx-auto grid-cols-3 lg:grid-cols-6 gap-5 md:gap-12 px-5">
+        <div className="col-span-2 lg:row-span-2">
           <img className="w-[150px] md:w-44 mb-4" src={logo} alt="Logo" />
           <ul className="space-y-5">
             <li>

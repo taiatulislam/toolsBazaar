@@ -48,8 +48,8 @@ export default function Navbar() {
   };
 
   return (
-    <div className="sticky top-0 z-10">
-      <div className="container mx-auto py-[10px] flex justify-between items-center flex-wrap px-2 lg:px-5 bg-gray-100">
+    <div className="sticky top-0 z-11 bg-gray-100">
+      <div className="container mx-auto py-[10px] flex justify-between items-center flex-wrap px-2 lg:px-5">
         {/* logo  */}
         <div className="h-[55px] w-[110px]">
           <Link to={"/"}>
@@ -65,7 +65,7 @@ export default function Navbar() {
         </div>
 
         {/* search bar  */}
-        <div className="hidden lg:block w-[50%]">
+        <div className="hidden md:block w-[50%]">
           <div className="flex items-center">
             <input
               type="text"
@@ -121,7 +121,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="hidden lg:flex container mx-auto justify-between items-center nav-container h-full px-5">
+        <div className="hidden md:flex container mx-auto justify-between items-center nav-container h-full px-5">
           <ul className="flex items-center gap-10 py-3">
             {menuItems?.map((item, index) => (
               <li key={index}>
