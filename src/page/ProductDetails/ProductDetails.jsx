@@ -21,23 +21,28 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <div className="container mx-auto my-10 px-10">
-        <div className="flex flex-row">
+      <div className="container mx-auto my-10 px-5 lg:px-10">
+        <div className="flex flex-col lg:flex-row">
           {/* First half */}
-          <div className="w-1/2 flex flex-col items-center">
-            <div className="text-center max-w-lg">
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
+            <div className="text-center max-w-[300px] md:max-w-lg">
               <Slider {...settings}>
-                {product?.image?.map((image, index) => (
-                  <div key={index}>
-                    <img src={image} alt="tools" />
-                  </div>
-                ))}
+                {product?.image?.map((image, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="flex items-center justify-center"
+                    >
+                      <img src={image} alt="tools" />
+                    </div>
+                  );
+                })}
               </Slider>
             </div>
           </div>
 
           {/* Second half */}
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2 mt-5 lg:mt-0">
             <h2 className="text-3xl font-semibold">{product?.title}</h2>
 
             <hr className="my-3" />

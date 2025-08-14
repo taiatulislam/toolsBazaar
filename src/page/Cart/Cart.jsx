@@ -6,7 +6,7 @@ import Featured3 from "../../assets/featured/featured-3.jpg";
 import { useState } from "react";
 
 const Carts = () => {
-const [carts, setCarts] = useState(myCarts)
+  const [carts, setCarts] = useState(myCarts);
 
   const { totalQuantity, totalPrice } = carts.reduce(
     (acc, item) => {
@@ -20,7 +20,7 @@ const [carts, setCarts] = useState(myCarts)
   return (
     <div className="container mx-auto duration-300">
       <div className="w-full rounded-2xl overflow-hidden shadow-lg my-5 duration-300">
-        <div className="bg-black text-[#b89149] duration-300  ">
+        <div className="bg-black text-[#b89149] duration-300 ">
           <div className="grid grid-cols-6 items-center justify-between font-semibold border border-gray-100 px-10 py-5">
             <h5 className="text-center text-base">Product</h5>
             <h5 className="text-center text-base">Product Name</h5>
@@ -66,21 +66,21 @@ const [carts, setCarts] = useState(myCarts)
 
 const myCarts = [
   {
-    id:1,
+    id: 1,
     product_image: Featured1,
     title: "Digital Multimeter",
     unit_price: 29.99,
     quantity: 2,
   },
   {
-    id:2,
+    id: 2,
     product_image: Featured2,
     title: "Hydraulic Car Jack",
     unit_price: 26.999,
     quantity: 1,
   },
   {
-    id:3,
+    id: 3,
     product_image: Featured3,
     title: "Cordless Drill Set",
     unit_price: 39.99,
