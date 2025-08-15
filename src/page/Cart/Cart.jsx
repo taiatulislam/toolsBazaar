@@ -21,16 +21,16 @@ const Carts = () => {
     <div className="container mx-auto duration-300">
       <div className="w-full rounded-2xl overflow-hidden shadow-lg my-5 duration-300">
         <div className="bg-black text-[#b89149] duration-300 ">
-          <div className="grid grid-cols-6 items-center justify-between font-semibold border border-gray-100 px-10 py-5">
-            <h5 className="text-center text-base">Product</h5>
-            <h5 className="text-center text-base">Product Name</h5>
-            <h5 className="text-center text-base">Unit Price</h5>
-            <h5 className="text-center text-base">Quantity</h5>
-            <h5 className="text-center text-base">Total</h5>
-            <h5 className="text-center text-base">Remove</h5>
+          <div className="grid grid-cols-6 items-center justify-between font-semibold border border-gray-100 px-2 md:px-10 py-5">
+            <h5 className="text-center text-xs md:text-base">Product</h5>
+            <h5 className="text-center text-xs md:text-base">Product Name</h5>
+            <h5 className="text-center text-xs md:text-base">Unit Price</h5>
+            <h5 className="text-center text-xs md:text-base">Quantity</h5>
+            <h5 className="text-center text-xs md:text-base">Total</h5>
+            <h5 className="text-center text-xs md:text-base">Remove</h5>
           </div>
         </div>
-        <div className="flex-1 grid grid-cols-1 gap-0">
+        <div className="flex-1 grid grid-cols-1 gap-2 md:gap-0">
           {carts?.length === 0 ? (
             <div className="text-center my-20">
               <p className=" my-10">Your cart is empty.</p>
@@ -42,17 +42,17 @@ const Carts = () => {
               ))}
 
               <div className="flex items-center justify-around gap-4 mb-3 mt-5">
-                <p className="bg-black px-4 py-2 rounded-full text-white">
+                <p className="bg-black py-2 px-4 rounded-full text-white text-xs md:text-base">
                   Total Quantity:{" "}
                   <span className=" text-[#FFA500]">{totalQuantity}</span>
                 </p>
-                <p className="bg-black px-4 py-2 rounded-full text-white">
+                <p className="bg-black py-2 px-4 rounded-full text-white text-xs md:text-base">
                   Total price:{" "}
                   <span className="text-[#FFA500]">
                     {totalPrice?.toFixed(2)}
                   </span>
                 </p>
-                <button className="bg-black text-[#FFA500] hover:bg-gray-800 px-4 py-2 rounded-full text-base flex items-center gap-1">
+                <button className="bg-black text-[#FFA500] hover:bg-gray-800 py-2 px-4 rounded-full flex items-center gap-1 text-xs md:text-base">
                   Checkout
                 </button>
               </div>
