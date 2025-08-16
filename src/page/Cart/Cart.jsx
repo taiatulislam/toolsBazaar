@@ -8,6 +8,8 @@ import { useState } from "react";
 const Carts = () => {
   const [carts, setCarts] = useState(myCarts);
 
+  console.log("carts", carts);
+
   const { totalQuantity, totalPrice } = carts.reduce(
     (acc, item) => {
       acc.totalQuantity += item.quantity;
@@ -18,8 +20,8 @@ const Carts = () => {
   );
 
   return (
-    <div className="container mx-auto duration-300">
-      <div className="w-full rounded-2xl overflow-hidden shadow-lg my-5 duration-300">
+    <div className="container mx-auto duration-300 px-2 md:px-5">
+      <div className="w-full rounded-lg overflow-hidden shadow-lg my-5 duration-300">
         <div className="bg-black text-[#b89149] duration-300 ">
           <div className="grid grid-cols-6 items-center justify-between font-semibold border border-gray-100 px-2 md:px-10 py-5">
             <h5 className="text-center text-xs md:text-base">Product</h5>
@@ -38,7 +40,7 @@ const Carts = () => {
           ) : (
             <>
               {carts?.map((item) => (
-                <CartCard cart={item} setCarts={setCarts} />
+                <CartCard key={item?.id} cart={item} setCarts={setCarts} />
               ))}
 
               <div className="flex items-center justify-around gap-4 mb-3 mt-5">
