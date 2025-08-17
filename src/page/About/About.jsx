@@ -2,48 +2,52 @@ import bannerImg from "../../assets/aboutUs/aboutUsBanner.jpg";
 import au1 from "../../assets/aboutUs/au1.jpg";
 import ourStoryImg1 from "../../assets/aboutUs/ourStoryImg.png";
 import ourMissionImg1 from "../../assets/aboutUs/ourMissionImg1.png";
+import SectionBanner from "../../components/SectionBanner";
 
 const About = () => {
   return (
-    <div className="container mx-auto text-justify px-5">
-      <div>
-        <h1 className="text-center text-4xl font-semibold my-10">
-          Our Journey and Commitment
-        </h1>
-        <img
-          src={bannerImg}
-          alt="Banner Image"
-          className="w-full rounded-xl mb-20"
-        />
+    <div>
+      <SectionBanner title={"About Us"} subTitle={"/ about"} />
+      <div className="container mx-auto text-justify px-5">
+        <div>
+          <h1 className="text-center text-4xl font-semibold my-10">
+            Our Journey and Commitment
+          </h1>
+          <img
+            src={bannerImg}
+            alt="Banner Image"
+            className="w-full rounded-xl mb-20"
+          />
 
-        <AboutSection {...aboutUsContent} />
-        <AboutSection {...ourStoryContent} />
-        <AboutSection {...ourMissionContent} />
-      </div>
-      <div className="pb-15">
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight">Our Impact</h2>
-          <p className="text-sm lg:text-lg lg:leading-8 max-w-4xl mx-auto ">
-            Discover key insights into Tools Bazaar&apos;s performance and
-            impact. From years in business to the number of customers served,
-            explore our accomplishments and the scale of our operations.
-          </p>
+          <AboutSection {...aboutUsContent} />
+          <AboutSection {...ourStoryContent} />
+          <AboutSection {...ourMissionContent} />
         </div>
-        <dl className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          {impactStats.map((stat, index) => (
-            <div
-              key={index}
-              className="flex flex-col bg-black/5 p-8 rounded-2xl"
-            >
-              <dt className="text-sm font-semibold">{stat.label}</dt>
-              <dd className="order-first text-xl lg:text-3xl font-semibold">
-                {stat.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
+        <div className="pb-15">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl font-bold tracking-tight">Our Impact</h2>
+            <p className="text-sm lg:text-lg lg:leading-8 max-w-4xl mx-auto ">
+              Discover key insights into Tools Bazaar&apos;s performance and
+              impact. From years in business to the number of customers served,
+              explore our accomplishments and the scale of our operations.
+            </p>
+          </div>
+          <dl className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            {impactStats.map((stat, index) => (
+              <div
+                key={index}
+                className="flex flex-col bg-black/5 p-8 rounded-2xl"
+              >
+                <dt className="text-sm font-semibold">{stat.label}</dt>
+                <dd className="order-first text-xl lg:text-3xl font-semibold">
+                  {stat.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <Clients />
       </div>
-      <Clients />
     </div>
   );
 };

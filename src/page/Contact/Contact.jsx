@@ -1,9 +1,11 @@
 import React from "react";
 import messageImg1 from "../../assets/png/contact.png";
+import SectionBanner from "../../components/SectionBanner";
 
 const Contact = () => {
   return (
     <div>
+      <SectionBanner title={"Contact Us"} subTitle={"/ contact"} />
       <div className="max-w-7xl mx-auto pt-10 px-8 mb-16">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900">

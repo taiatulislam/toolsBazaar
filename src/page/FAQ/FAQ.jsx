@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SectionBanner from "../../components/SectionBanner";
 
 const FAQ = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,83 +26,86 @@ const FAQ = () => {
     : faqs.flat();
 
   return (
-    <div className="container px-5 py-12 mx-auto">
-      <h1 className="text-3xl font-semibold text-center text-gray-800">
-        Have any Questions?
-      </h1>
+    <div>
+      <SectionBanner title={"FAQ"} subTitle={"/ faq"} />
+      <div className="container px-5 py-12 mx-auto">
+        <h1 className="text-3xl font-semibold text-center text-gray-800">
+          Have any Questions?
+        </h1>
 
-      <div className="mt-16 flex">
-        <div className="hidden md:block mx-2 lg:mx-12">
-          <h1 className="text-xl font-semibold text-gray-800">
-            Table of Content
-          </h1>
-          <div className="space-y-4 mt-8 text-base">
-            <p
-              className={`block text-red-600 hover:underline cursor-pointer ${
-                selectedCategory === "All" ? "font-semibold" : ""
-              }`}
-              onClick={() => handleCategoryClick("All")}
-            >
-              All
-            </p>
-            {faqs.map((faq, index) => (
+        <div className="mt-16 flex">
+          <div className="hidden md:block mx-2 lg:mx-12">
+            <h1 className="text-xl font-semibold text-gray-800">
+              Table of Content
+            </h1>
+            <div className="space-y-4 mt-8 text-base">
               <p
-                key={index}
                 className={`block text-red-600 hover:underline cursor-pointer ${
-                  selectedCategory === faq.category ? "font-semibold" : ""
+                  selectedCategory === "All" ? "font-semibold" : ""
                 }`}
-                onClick={() => handleCategoryClick(faq.category)}
+                onClick={() => handleCategoryClick("All")}
               >
-                {faq.category}
+                All
               </p>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex-1 mt-0 mx-12">
-          {filteredFaqs.map((faq, index) => (
-            <div key={index}>
-              {faq.questions.map((question, qIndex) => (
-                <div key={qIndex} className="border-t border-gray-300 py-5">
-                  <button
-                    onClick={() => toggleAccordion(question.question)}
-                    className="flex items-center focus:outline-none py-1 my-1"
-                  >
-                    <svg
-                      className={`flex-shrink-0 w-6 h-6 ${
-                        isOpen && selectedQuestion === question.question
-                          ? "transform rotate-90"
-                          : ""
-                      } text-red-600`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M20 12H4"
-                      ></path>
-                    </svg>
-                    <h1 className="mx-4 text-base lg:text-xl text-gray-700 text-start">
-                      {question.question}
-                    </h1>
-                  </button>
-
-                  {isOpen && selectedQuestion === question.question && (
-                    <div className="flex pl-0 my-7 mx-10">
-                      <span className="border border-red-600"></span>
-                      <p className="max-w-3xl text-sm lg:text-lg px-4 text-gray-600">
-                        {question.answer}
-                      </p>
-                    </div>
-                  )}
-                </div>
+              {faqs.map((faq, index) => (
+                <p
+                  key={index}
+                  className={`block text-red-600 hover:underline cursor-pointer ${
+                    selectedCategory === faq.category ? "font-semibold" : ""
+                  }`}
+                  onClick={() => handleCategoryClick(faq.category)}
+                >
+                  {faq.category}
+                </p>
               ))}
             </div>
-          ))}
+          </div>
+
+          <div className="flex-1 mt-0 mx-12">
+            {filteredFaqs.map((faq, index) => (
+              <div key={index}>
+                {faq.questions.map((question, qIndex) => (
+                  <div key={qIndex} className="border-t border-gray-300 py-5">
+                    <button
+                      onClick={() => toggleAccordion(question.question)}
+                      className="flex items-center focus:outline-none py-1 my-1"
+                    >
+                      <svg
+                        className={`flex-shrink-0 w-6 h-6 ${
+                          isOpen && selectedQuestion === question.question
+                            ? "transform rotate-90"
+                            : ""
+                        } text-red-600`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M20 12H4"
+                        ></path>
+                      </svg>
+                      <h1 className="mx-4 text-base lg:text-xl text-gray-700 text-start">
+                        {question.question}
+                      </h1>
+                    </button>
+
+                    {isOpen && selectedQuestion === question.question && (
+                      <div className="flex pl-0 my-7 mx-10">
+                        <span className="border border-red-600"></span>
+                        <p className="max-w-3xl text-sm lg:text-lg px-4 text-gray-600">
+                          {question.answer}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

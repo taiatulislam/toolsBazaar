@@ -4,6 +4,7 @@ import Featured1 from "../../assets/featured/featured-1.jpg";
 import Featured2 from "../../assets/featured/featured-2.jpg";
 import Featured3 from "../../assets/featured/featured-3.jpg";
 import { useState } from "react";
+import SectionBanner from "../../components/SectionBanner";
 
 const Carts = () => {
   const [carts, setCarts] = useState(myCarts);
@@ -20,6 +21,11 @@ const Carts = () => {
   );
 
   return (
+    <div>
+      <SectionBanner
+        title={"Cart"}
+        subTitle={"/ cart"}
+      />
     <div className="container mx-auto duration-300 px-2 md:px-5">
       <div className="w-full rounded-lg overflow-hidden shadow-lg my-5 duration-300">
         <div className="bg-black text-[#b89149] duration-300 ">
@@ -62,6 +68,7 @@ const Carts = () => {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 };

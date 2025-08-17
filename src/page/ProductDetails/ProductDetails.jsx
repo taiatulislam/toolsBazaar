@@ -4,6 +4,7 @@ import { RiShoppingBag2Line } from "react-icons/ri";
 import Slider from "react-slick";
 import image1 from "../../assets/featured/featured-1.jpg";
 import "./Table.css";
+import SectionBanner from "../../components/SectionBanner";
 
 const ProductDetails = () => {
   const settings = {
@@ -21,6 +22,10 @@ const ProductDetails = () => {
 
   return (
     <div>
+      <SectionBanner
+        title={"Product Details"}
+        subTitle={`Shop / Products / ${product?.id}`}
+      />
       <div className="container mx-auto my-10 px-5 lg:px-10">
         <div className="flex flex-col lg:flex-row">
           {/* First half */}
@@ -165,6 +170,7 @@ const ProductDetails = () => {
 };
 
 const product = {
+  id: 1,
   image: [image1, image1],
   title: "Cordless Drill Set – 20V Max Lithium-Ion",
   price: 59.99,

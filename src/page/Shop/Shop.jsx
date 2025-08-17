@@ -15,7 +15,7 @@ const Shop = () => {
 
   return (
     <>
-      <SectionBanner title={"Collection"} subTitle={"Shop / Products"} />
+      <SectionBanner title={"Collection"} subTitle={"/ shop"} />
       <div className="flex mx-auto relative">
         {/* Sidebar Start */}
         <aside className="hidden md:block min-w-10 lg:min-w-96 h-[calc(100dvh-100px)] overflow-y-auto scrollbar-hide bg-white px-5 lg:px-10 pb-10">
