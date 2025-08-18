@@ -4,7 +4,8 @@ import Image3 from "../../assets/category/hand-tools.png";
 import Image4 from "../../assets/category/electrical-tools.png";
 import Image5 from "../../assets/category/safety-equipments.png";
 import Image6 from "../../assets/category/yellow-drill.png";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import Button from "../Button";
 
 const Category = () => {
   return (
@@ -59,6 +60,7 @@ const Category = () => {
 };
 
 const CategoryCard = ({ title, image, bgcolor }) => {
+  const navigate = useNavigate();
   return (
     <div
       className="py-10 pl-5 text-white rounded-xl relative h-[320px] flex items-end hover:scale-105 duration-300 overflow-hidden"
@@ -66,25 +68,17 @@ const CategoryCard = ({ title, image, bgcolor }) => {
         background: `linear-gradient(to bottom right, ${bgcolor}FF, ${bgcolor}B3)`,
       }}
     >
-      <div>
+      <div className="relative z-10">
         <p>Enjoy</p>
         <p className="text-2xl font-semibold my-[2px]">With</p>
-        <p className="text-5xl font-bold opacity-30 mb-2">{title}</p>
-        <Link
-          state={{ value: "Automotive Tools", type: "category" }}
-          to="/shop"
-        >
-          <button
-            className={`bg-[#fdc62e] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-1`}
-          >
-            Browse
-          </button>
-        </Link>
+        <p className="text-5xl font-bold opacity-40 mb-2">{title}</p>
+        <Button name="Browse" handleButton={() => navigate("/shop")} />
       </div>
+
       <img
         src={image}
         alt={title}
-        className="absolute bottom-0 right-0 h-full"
+        className="absolute bottom-0 right-0 h-full z-0"
       />
     </div>
   );

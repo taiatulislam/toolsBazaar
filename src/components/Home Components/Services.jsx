@@ -16,12 +16,12 @@ const Service = ({ item }) => {
   return (
     <div
       key={item.id}
-      className="flex items-center gap-4 p-5 rounded-xl shadow-sm bg-gray-100 cursor-pointer"
+      className="flex items-center gap-4 p-4 rounded-xl shadow-sm bg-gray-100 cursor-pointer"
     >
       <img className="w-10" src={item.images} alt={item.title} />
       <div className="space-y-1">
         <h3 className="font-bold text-sm text-red-500">{item.title}</h3>
-        <p className="text-sm">{item.description}</p>
+        <p className="text-xs">{item.description}</p>
       </div>
     </div>
   );

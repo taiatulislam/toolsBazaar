@@ -5,6 +5,7 @@ import Img2 from "../../src/assets/banner/yellow-tools-kit-1.png";
 import bg2 from "../../src/assets/banner/bg2.png";
 import Img3 from "../../src/assets/banner/yellow-chainsaw1.png";
 import { useNavigate } from "react-router";
+import Button from "./Button";
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ const Banner = () => {
           <div key={data?.id}>
             {/* Banner section */}
             <div
-              className="p-5 md:p-20 overflow-hidden rounded-[16px] min-h-[450px] md:min-h-[650px] hero-bg-color flex justify-center items-center"
+              className="p-5 md:p-20 overflow-hidden rounded-[16px] min-h-[450px] md:min-h-[650px] flex justify-center items-center"
               style={{
                 backgroundImage: `url(${data?.bg})`,
                 backgroundSize: "cover",
@@ -77,12 +78,10 @@ const Banner = () => {
                     {data?.title2}
                   </h1>
                   <div>
-                    <button
-                      onClick={() => navigate("/shop")}
-                      className={`bg-[#fdc62e]/90 text-black cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full`}
-                    >
-                      Shop By Category
-                    </button>
+                    <Button
+                      name="Shop By Category"
+                      handleButton={() => navigate("/shop")}
+                    />
                   </div>
                 </div>
                 {/* Img section */}

@@ -10,7 +10,7 @@ const ProductCard = ({ item }) => {
         <div className="w-full h-full flex items-center justify-center cursor-pointer">
           <img
             src={item.image}
-            alt={"tool"}
+            alt={item.title}
             style={{ height: "100%", width: "100%", objectFit: "contain" }}
             className="rounded-lg p-3 w-full "
           />
@@ -35,13 +35,13 @@ const ProductCard = ({ item }) => {
         </div>
       </div>
       <div className="mt-5 px-2">
-        <h2 className="text-base md:text-xl montserrat">{item.title}</h2>
-        <p className="text-base md:text-lg my-1.5 md:my-3 text-black montserrat">
-          <FaStar className="inline mr-2" />
-          <FaStar className="inline mr-2" />
-          <FaStar className="inline mr-2" />
-          <FaStar className="inline mr-2" />
-          <FaStar className="inline" />
+        <h2 className="text-base md:text-lg montserrat">{item.title}</h2>
+        <p className="text-base md:text-lg my-1.5 md:mb-2 text-black montserrat">
+          <FaStar className="inline mr-2 text-amber-400" />
+          <FaStar className="inline mr-2 text-amber-400" />
+          <FaStar className="inline mr-2 text-amber-400" />
+          <FaStar className="inline mr-2 text-amber-400" />
+          <FaStar className="inline text-amber-400" />
         </p>
         {item.offer?.discount === "N/A" ? (
           <div>
@@ -56,7 +56,9 @@ const ProductCard = ({ item }) => {
                 (item.price * parseInt(item.offer?.discount)) / 100
               ).toFixed(2)}
             </p>
-            <p className="text-base md:text-xl line-through">$ {item.price}</p>
+            <p className="text-base md:text-xl font-medium line-through text-red-500">
+              $ {item.price}
+            </p>
           </div>
         )}
       </div>

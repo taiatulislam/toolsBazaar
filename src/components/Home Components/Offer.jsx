@@ -4,8 +4,11 @@ import Offer1 from "../../assets/offer/offer-1.png";
 import Offer2 from "../../assets/offer/offer-2.png";
 import Offer3 from "../../assets/offer/offer-3.png";
 import Offer4 from "../../assets/offer/offer-4.png";
+import Button from "../Button";
+import { useNavigate } from "react-router";
 
 const Offer = () => {
+  const navigate = useNavigate();
   return (
     <div className="my-8 px-5">
       {/* Offer */}
@@ -25,9 +28,11 @@ const Offer = () => {
           <h1 className="text-4xl font-bold my-5">
             Get 25% <br /> Flat Off
           </h1>
-          <button className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl cursor-pointer">
-            Shop Now
-          </button>
+          <Button
+            name="Shop Now"
+            handleButton={() => navigate("/shop")}
+            color="bg-yellow-300"
+          />
         </div>
         {/* Offer 02 */}
         <div
@@ -44,9 +49,11 @@ const Offer = () => {
           <h1 className="text-white text-4xl font-bold my-5">
             Tools Kit <br /> Box
           </h1>
-          <button className="bg-yellow-300 font-semibold p-2 px-4 rounded-3xl cursor-pointer">
-            Shop Now
-          </button>
+          <Button
+            name="Shop Now"
+            handleButton={() => navigate("/shop")}
+            color="bg-yellow-300"
+          />
         </div>
       </div>
 

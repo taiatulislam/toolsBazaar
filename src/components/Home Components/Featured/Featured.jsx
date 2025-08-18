@@ -15,6 +15,7 @@ import Featured3 from "../../../assets/featured/featured-3.jpg";
 import Featured4 from "../../../assets/featured/featured-4.jpg";
 
 import "./Featured.css";
+import Heading from "../../Heading";
 
 const Featured = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,23 +37,10 @@ const Featured = () => {
   return (
     <div className="my-20 px-5">
       <div className="flex flex-col items-center justify-center mb-10">
-        <h2 className="text-xl md:text-3xl lg:text-4xl font-bold montserrat text-center mb-3">
-          Featured
-        </h2>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="100"
-          height="12"
-          fill="#fdc62e"
-          version="1.1"
-          viewBox="0 139.474 290.658 11.711"
-          xmlSpace="preserve"
-        >
-          <path fill="#fdc62e" d="M0 139.474H290.658V151.185H0z"></path>
-        </svg>
+        <Heading title="Featured" />
       </div>
 
-      <div className="flex flex-col md:flex-row  gap-5 rounded-lg p-5 border-2 border-gray-200">
+      <div className="flex flex-col md:flex-row gap-5 rounded-lg p-5 border-2 border-gray-200">
         {/* Left: Image Carousel */}
         <div className="text-center w-full md:w-1/2 flex items-center justify-center">
           <Slider {...settings} className="w-full h-full">

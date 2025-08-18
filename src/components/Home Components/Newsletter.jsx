@@ -8,7 +8,7 @@ const Newsletter = () => {
               Stay Updated with Our{" "}
               <span className="text-yellow-400">Newsletter</span>
             </h2>
-            <p className="mt-4 text-sm md:text-base lg:text-xl text-gray-300 w-full md:w-2/3 lg:w-1/2 mx-auto pb-3">
+            <p className="mt-4 text-sm md:text-base lg:text-lg text-gray-300 w-full md:w-2/3 lg:w-1/2 mx-auto pb-3">
               Subscribe to our newsletter and get the latest news, updates, and
               insights in the world of hardware tech.
             </p>
@@ -19,12 +19,12 @@ const Newsletter = () => {
               type="email"
               name="userEmail"
               className="p-2.5 md:p-4 rounded-lg w-full md:w-1/2 bg-white focus:outline-none focus:ring-0 focus:border-none"
-              placeholder="Enter your email"
+              placeholder="Enter your email here..."
             />
             <div>
               <button
                 type="submit"
-                className="bg-yellow-400 font-semibold p-2.5 md:p-4 -ml-3 rounded-tr-lg rounded-br-lg"
+                className="bg-yellow-400 font-semibold p-2.5 md:p-4 -ml-3 rounded-tr-lg rounded-br-lg cursor-pointer"
               >
                 Subscribe
               </button>
