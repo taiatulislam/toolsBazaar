@@ -3,7 +3,7 @@ import bannerImage from "../assets/banner/section-banner.jpg";
 const SectionBanner = ({ title, subTitle }) => {
   return (
     <div
-      className="h-[120px] pt-5 pl-20 text-white"
+      className="h-[120px] pt-5 pl-20 text-white hidden md:block"
       style={{
         backgroundImage: `linear-gradient(to right, #000000c9, #000000a1), url(${bannerImage})`,
         backgroundPosition: "top center",

@@ -8,17 +8,19 @@ import Featured4 from "../../assets/featured/featured-4.jpg";
 
 import "./Shop.css";
 import SectionBanner from "../../components/SectionBanner";
+import Pagination from "../../components/Pagination";
 
 const Shop = () => {
   const [showAllCategories, setShowAllCategories] = useState(false);
   const [showAllBrands, setShowAllBrands] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   return (
     <>
       <SectionBanner title={"Collection"} subTitle={"/ shop"} />
       <div className="flex mx-auto relative">
         {/* Sidebar Start */}
-        <aside className="hidden md:block min-w-10 lg:min-w-96 h-[calc(100dvh-100px)] overflow-y-auto scrollbar-hide bg-white px-5 lg:px-10 pb-10">
+        <aside className="hidden md:block min-w-10 lg:min-w-96 h-[calc(100dvh-10px)] overflow-y-auto scrollbar-hide bg-white px-5 lg:px-10 pb-10">
           {/* Category Filter */}
           <TypeFilter
             title="Filter by category"
@@ -65,12 +67,20 @@ const Shop = () => {
         </aside>
 
         {/* Product Grid */}
-        <main className="w-full h-[calc(100dvh-6rem)] overflow-y-auto scrollbar-hide px-2 md:px-10 pt-5 grid grid-cols-2 lg:grid-cols-4 gap-[3%]">
-          {products?.map((product, index) => (
-            <div key={index} className="pb-5">
-              <ProductCard item={product} />
-            </div>
-          ))}
+        <main className="w-full px-2 md:px-10 pt-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-[3%] h-[calc(100dvh-2rem)] overflow-y-auto scrollbar-hide">
+            {products?.map((product, index) => (
+              <div key={index} className="pb-5">
+                <ProductCard item={product} />
+              </div>
+            ))}
+          </div>
+          <Pagination
+            totalItems={90}
+            itemsPerPage={12}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+          />
         </main>
       </div>
     </>
