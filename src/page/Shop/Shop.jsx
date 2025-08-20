@@ -69,14 +69,16 @@ const Shop = () => {
         {/* Product Grid */}
         <main className="w-full px-2 md:px-10 pt-5">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-[3%] h-[calc(100dvh-2rem)] overflow-y-auto scrollbar-hide">
-            {products?.map((product, index) => (
-              <div key={index} className="pb-5">
-                <ProductCard item={product} />
-              </div>
-            ))}
+            {products
+              ?.slice(currentPage * 12 - 12, currentPage * 12)
+              ?.map((product, index) => (
+                <div key={index} className="pb-5">
+                  <ProductCard item={product} />
+                </div>
+              ))}
           </div>
           <Pagination
-            totalItems={90}
+            totalItems={60}
             itemsPerPage={12}
             currentPage={currentPage}
             onPageChange={setCurrentPage}
@@ -90,7 +92,7 @@ const Shop = () => {
 const products = [
   {
     title: "Cordless Drill Set",
-    image: Featured3,
+    image: Featured1,
     price: "39.99",
     offer: { discount: "20" },
   },
@@ -102,7 +104,7 @@ const products = [
   },
   {
     title: "Digital Multimeter",
-    image: Featured1,
+    image: Featured3,
     price: "29.99",
     offer: { discount: "10" },
   },
@@ -114,61 +116,61 @@ const products = [
   },
   {
     title: "Magnetic Tool Holder",
-    image: Featured1,
+    image: Featured4,
     price: "12.99",
     offer: { discount: "N/A" },
   },
   {
     title: "Precision Screwdriver Kit",
-    image: Featured2,
+    image: Featured3,
     price: "17.49",
     offer: { discount: "8" },
   },
   {
     title: "Heavy Duty Work Gloves",
-    image: Featured4,
+    image: Featured2,
     price: "11.99",
     offer: { discount: "12" },
   },
   {
     title: "Self-Leveling Laser",
-    image: Featured3,
+    image: Featured1,
     price: "9.99",
     offer: { discount: "N/A" },
   },
   {
     title: "Foldable Workbench",
-    image: Featured2,
+    image: Featured4,
     price: "49.99",
     offer: { discount: "18" },
   },
   {
     title: "LED Headlamp",
-    image: Featured1,
+    image: Featured2,
     price: "7.99",
     offer: { discount: "30" },
   },
   {
     title: "Electric Screwdriver",
-    image: Featured3,
+    image: Featured1,
     price: "22.99",
     offer: { discount: "N/A" },
   },
   {
     title: "Telescoping Ladder",
-    image: Featured4,
+    image: Featured3,
     price: "69.99",
     offer: { discount: "22" },
   },
   {
     title: "Compact Heat Gun",
-    image: Featured1,
+    image: Featured2,
     price: "19.99",
     offer: { discount: "7" },
   },
   {
     title: "Safety Goggles",
-    image: Featured2,
+    image: Featured1,
     price: "5.49",
     offer: { discount: "9" },
   },
@@ -177,6 +179,264 @@ const products = [
     image: Featured3,
     price: "24.99",
     offer: { discount: "14" },
+  },
+  {
+    title: "Wire Stripper Tool",
+    image: Featured2,
+    price: "8.99",
+    offer: { discount: "N/A" },
+  },
+  {
+    title: "Adjustable Wrench",
+    image: Featured1,
+    price: "15.99",
+    offer: { discount: "11" },
+  },
+  {
+    title: "Electric Sander",
+    image: Featured3,
+    price: "34.99",
+    offer: { discount: "N/A" },
+  },
+  {
+    title: "Measuring Tape",
+    image: Featured2,
+    price: "4.99",
+    offer: { discount: "6" },
+  },
+  {
+    title: "Portable Air Compressor",
+    image: Featured1,
+    price: "59.99",
+    offer: { discount: "20" },
+  },
+  {
+    title: "Hacksaw Set",
+    image: Featured3,
+    price: "13.99",
+    offer: { discount: "10" },
+  },
+  {
+    title: "Utility Knife",
+    image: Featured2,
+    price: "6.49",
+    offer: { discount: "5" },
+  },
+  {
+    title: "Rechargeable Flashlight",
+    image: Featured1,
+    price: "18.99",
+    offer: { discount: "12" },
+  },
+  {
+    title: "Ratchet Wrench Set",
+    image: Featured3,
+    price: "42.99",
+    offer: { discount: "16" },
+  },
+  {
+    title: "Cordless Angle Grinder",
+    image: Featured2,
+    price: "79.99",
+    offer: { discount: "25" },
+  },
+  {
+    title: "Caulking Gun",
+    image: Featured1,
+    price: "9.99",
+    offer: { discount: "N/A" },
+  },
+  {
+    title: "Steel Hammer",
+    image: Featured3,
+    price: "12.49",
+    offer: { discount: "7" },
+  },
+  {
+    title: "Tool Organizer Box",
+    image: Featured2,
+    price: "21.99",
+    offer: { discount: "15" },
+  },
+  {
+    title: "Drill Bit Set",
+    image: Featured1,
+    price: "27.99",
+    offer: { discount: "13" },
+  },
+  {
+    title: "Cordless Impact Wrench",
+    image: Featured3,
+    price: "89.99",
+    offer: { discount: "30" },
+  },
+  {
+    title: "Pry Bar Set",
+    image: Featured2,
+    price: "16.49",
+    offer: { discount: "N/A" },
+  },
+  {
+    title: "Welding Helmet",
+    image: Featured1,
+    price: "54.99",
+    offer: { discount: "18" },
+  },
+  {
+    title: "Claw Hammer",
+    image: Featured3,
+    price: "8.99",
+    offer: { discount: "6" },
+  },
+  {
+    title: "Paint Sprayer",
+    image: Featured2,
+    price: "74.99",
+    offer: { discount: "22" },
+  },
+  {
+    title: "Bench Grinder",
+    image: Featured1,
+    price: "64.99",
+    offer: { discount: "20" },
+  },
+  {
+    title: "Cordless Jigsaw",
+    image: Featured3,
+    price: "49.99",
+    offer: { discount: "17" },
+  },
+  {
+    title: "Work Apron",
+    image: Featured2,
+    price: "14.49",
+    offer: { discount: "8" },
+  },
+  {
+    title: "Pipe Wrench",
+    image: Featured1,
+    price: "19.99",
+    offer: { discount: "10" },
+  },
+  {
+    title: "Digital Caliper",
+    image: Featured3,
+    price: "23.99",
+    offer: { discount: "12" },
+  },
+  {
+    title: "Work Light",
+    image: Featured2,
+    price: "27.99",
+    offer: { discount: "15" },
+  },
+  {
+    title: "Circular Saw",
+    image: Featured1,
+    price: "69.99",
+    offer: { discount: "25" },
+  },
+  {
+    title: "Staple Gun",
+    image: Featured3,
+    price: "11.49",
+    offer: { discount: "N/A" },
+  },
+  {
+    title: "Hand Saw",
+    image: Featured2,
+    price: "7.99",
+    offer: { discount: "6" },
+  },
+  {
+    title: "Work Boots",
+    image: Featured1,
+    price: "44.99",
+    offer: { discount: "15" },
+  },
+  {
+    title: "Air Blower",
+    image: Featured3,
+    price: "39.99",
+    offer: { discount: "19" },
+  },
+  {
+    title: "Allen Key Set",
+    image: Featured2,
+    price: "13.49",
+    offer: { discount: "9" },
+  },
+  {
+    title: "Wood Chisel Set",
+    image: Featured1,
+    price: "18.49",
+    offer: { discount: "11" },
+  },
+  {
+    title: "Heat Resistant Gloves",
+    image: Featured3,
+    price: "15.99",
+    offer: { discount: "N/A" },
+  },
+  {
+    title: "Tool Belt",
+    image: Featured2,
+    price: "24.99",
+    offer: { discount: "13" },
+  },
+  {
+    title: "Cordless Nail Gun",
+    image: Featured1,
+    price: "84.99",
+    offer: { discount: "28" },
+  },
+  {
+    title: "Measuring Wheel",
+    image: Featured3,
+    price: "33.99",
+    offer: { discount: "12" },
+  },
+  {
+    title: "Lawn Mower",
+    image: Featured2,
+    price: "129.99",
+    offer: { discount: "30" },
+  },
+  {
+    title: "Electric Paint Mixer",
+    image: Featured1,
+    price: "26.99",
+    offer: { discount: "N/A" },
+  },
+  {
+    title: "Angle Finder",
+    image: Featured3,
+    price: "17.99",
+    offer: { discount: "10" },
+  },
+  {
+    title: "Cordless Chainsaw",
+    image: Featured2,
+    price: "99.99",
+    offer: { discount: "27" },
+  },
+  {
+    title: "Shop Vacuum Cleaner",
+    image: Featured1,
+    price: "59.99",
+    offer: { discount: "22" },
+  },
+  {
+    title: "Plier Set",
+    image: Featured3,
+    price: "14.99",
+    offer: { discount: "9" },
+  },
+  {
+    title: "Workbench Clamp",
+    image: Featured2,
+    price: "19.49",
+    offer: { discount: "11" },
   },
 ];
 
