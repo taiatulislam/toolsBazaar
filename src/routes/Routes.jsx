@@ -11,6 +11,7 @@ import Register from "../page/Register/Register";
 import Carts from "../page/Cart/Cart";
 import Wishlist from "../page/Wishlist/Wishlist";
 import ProductDetails from "../page/ProductDetails/ProductDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
   {
@@ -40,11 +41,19 @@ const routes = createBrowserRouter([
       },
       {
         path: "cart",
-        element: <Carts />,
+        element: (
+          <PrivateRoute>
+            <Carts />
+          </PrivateRoute>
+        ),
       },
       {
         path: "wishlist",
-        element: <Wishlist />,
+        element: (
+          <PrivateRoute>
+            <Wishlist />
+          </PrivateRoute>
+        ),
       },
       {
         path: "about",
