@@ -9,6 +9,7 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import Swal from "sweetalert2";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
+import secureLocalStorage from "react-secure-storage";
 
 export default function Navbar() {
   const location = useLocation();
@@ -32,7 +33,7 @@ export default function Navbar() {
       if (result.isConfirmed) {
         logOut();
         setUser(null);
-        localStorage.removeItem("user");
+        secureLocalStorage.removeItem("user");
         Swal.fire({
           title: "Logout!",
           text: "You successfully Logout.",

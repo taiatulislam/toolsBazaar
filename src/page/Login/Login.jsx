@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import backgroundPattern from "../../assets/background/login-pattern.png";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import secureLocalStorage from "react-secure-storage";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(true);
@@ -38,7 +39,7 @@ export default function Login() {
       };
 
       setUser(userData);
-      localStorage.setItem("user", JSON.stringify(userData));
+      secureLocalStorage.setItem("user", JSON.stringify(userData));
 
       Swal.fire({
         position: "top-center",
@@ -57,7 +58,7 @@ export default function Login() {
     signInUser(formData?.email, formData?.password)
       .then(() => {
         setUser(formData);
-        localStorage.setItem("user", JSON.stringify(formData));
+        secureLocalStorage.setItem("user", JSON.stringify(formData));
         Swal.fire({
           position: "top-center",
           icon: "success",

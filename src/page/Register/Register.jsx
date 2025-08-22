@@ -5,6 +5,7 @@ import backgroundPattern from "../../assets/background/login-pattern.png";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import secureLocalStorage from "react-secure-storage";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(true);
@@ -74,7 +75,7 @@ export default function Register() {
       };
 
       setUser(userData);
-      localStorage.setItem("user", JSON.stringify(userData));
+      secureLocalStorage.setItem("user", JSON.stringify(userData));
 
       Swal.fire({
         position: "top-center",

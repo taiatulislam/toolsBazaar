@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import app from "../../firebase.config";
+import secureLocalStorage from "react-secure-storage";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext(null);
@@ -17,7 +18,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const userData = localStorage.getItem("user");
+    const userData = secureLocalStorage.getItem("user");
     if (userData) setUser(JSON.parse(userData));
   }, []);
 
