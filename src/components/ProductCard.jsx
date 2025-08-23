@@ -1,15 +1,27 @@
 import { FaStar, FaShoppingCart, FaHeart } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
+import Featured1 from "../assets/featured/featured-1.jpg";
+import Featured2 from "../assets/featured/featured-2.jpg";
+import Featured3 from "../assets/featured/featured-3.jpg";
+import Featured4 from "../assets/featured/featured-4.jpg";
+
 const ProductCard = ({ item }) => {
   const navigate = useNavigate();
+
+  const featuredImages = {
+    Featured1,
+    Featured2,
+    Featured3,
+    Featured4,
+  };
 
   return (
     <div onClick={() => navigate("/shop/1")}>
       <div className="relative flex items-center rounded-lg border-2 border-gray-200 group aspect-square">
         <div className="w-full h-full flex items-center justify-center cursor-pointer">
           <img
-            src={item.image}
+            src={featuredImages[item.image]}
             alt={item.title}
             style={{ height: "100%", width: "100%", objectFit: "contain" }}
             className="rounded-lg p-3 w-full "

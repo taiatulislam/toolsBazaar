@@ -1,0 +1,582 @@
+[
+  {
+    "title": "Cordless Drill Set",
+    "image": "Featured1",
+    "price": "39.99",
+    "offer": {
+      "discount": "20"
+    },
+    "category": "Welding Tools",
+    "brand": "Craftsman"
+  },
+  {
+    "title": "Hydraulic Car Jack",
+    "image": "Featured4",
+    "price": "29.99",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Fastening Tools",
+    "brand": "Hitachi"
+  },
+  {
+    "title": "Digital Multimeter",
+    "image": "Featured3",
+    "price": "29.99",
+    "offer": {
+      "discount": "10"
+    },
+    "category": "Painting Tools",
+    "brand": "Tacklife"
+  },
+  {
+    "title": "Reflective Vest",
+    "image": "Featured2",
+    "price": "14.99",
+    "offer": {
+      "discount": "15"
+    },
+    "category": "Painting Tools",
+    "brand": "Dremel"
+  },
+  {
+    "title": "Magnetic Tool Holder",
+    "image": "Featured4",
+    "price": "12.99",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Hand Tools",
+    "brand": "Stanley"
+  },
+  {
+    "title": "Precision Screwdriver Kit",
+    "image": "Featured3",
+    "price": "17.49",
+    "offer": {
+      "discount": "8"
+    },
+    "category": "Gardening Tools",
+    "brand": "Craftsman"
+  },
+  {
+    "title": "Heavy Duty Work Gloves",
+    "image": "Featured2",
+    "price": "11.99",
+    "offer": {
+      "discount": "12"
+    },
+    "category": "Tool Storage",
+    "brand": "Hitachi"
+  },
+  {
+    "title": "Self-Leveling Laser",
+    "image": "Featured1",
+    "price": "9.99",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Hand Tools",
+    "brand": "Bosch"
+  },
+  {
+    "title": "Foldable Workbench",
+    "image": "Featured4",
+    "price": "49.99",
+    "offer": {
+      "discount": "18"
+    },
+    "category": "Cutting Tools",
+    "brand": "Klein Tools"
+  },
+  {
+    "title": "LED Headlamp",
+    "image": "Featured2",
+    "price": "7.99",
+    "offer": {
+      "discount": "30"
+    },
+    "category": "Plumbing Tools",
+    "brand": "Ryobi"
+  },
+  {
+    "title": "Electric Screwdriver",
+    "image": "Featured1",
+    "price": "22.99",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Plumbing Tools",
+    "brand": "RIDGID"
+  },
+  {
+    "title": "Telescoping Ladder",
+    "image": "Featured3",
+    "price": "69.99",
+    "offer": {
+      "discount": "22"
+    },
+    "category": "Safety Gear",
+    "brand": "Craftsman"
+  },
+  {
+    "title": "Compact Heat Gun",
+    "image": "Featured2",
+    "price": "19.99",
+    "offer": {
+      "discount": "7"
+    },
+    "category": "Painting Tools",
+    "brand": "Klein Tools"
+  },
+  {
+    "title": "Safety Goggles",
+    "image": "Featured1",
+    "price": "5.49",
+    "offer": {
+      "discount": "9"
+    },
+    "category": "Construction Tools",
+    "brand": "DeWalt"
+  },
+  {
+    "title": "Mini Socket Set",
+    "image": "Featured3",
+    "price": "24.99",
+    "offer": {
+      "discount": "14"
+    },
+    "category": "Electrical Tools",
+    "brand": "Metabo"
+  },
+  {
+    "title": "Wire Stripper Tool",
+    "image": "Featured2",
+    "price": "8.99",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Measuring Tools",
+    "brand": "Hilti"
+  },
+  {
+    "title": "Adjustable Wrench",
+    "image": "Featured1",
+    "price": "15.99",
+    "offer": {
+      "discount": "11"
+    },
+    "category": "Tool Storage",
+    "brand": "Black+Decker"
+  },
+  {
+    "title": "Electric Sander",
+    "image": "Featured3",
+    "price": "34.99",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Plumbing Tools",
+    "brand": "Hilti"
+  },
+  {
+    "title": "Measuring Tape",
+    "image": "Featured2",
+    "price": "4.99",
+    "offer": {
+      "discount": "6"
+    },
+    "category": "Cutting Tools",
+    "brand": "Klein Tools"
+  },
+  {
+    "title": "Portable Air Compressor",
+    "image": "Featured1",
+    "price": "59.99",
+    "offer": {
+      "discount": "20"
+    },
+    "category": "Tool Storage",
+    "brand": "Milwaukee"
+  },
+  {
+    "title": "Hacksaw Set",
+    "image": "Featured3",
+    "price": "13.99",
+    "offer": {
+      "discount": "10"
+    },
+    "category": "Plumbing Tools",
+    "brand": "Stanley"
+  },
+  {
+    "title": "Utility Knife",
+    "image": "Featured2",
+    "price": "6.49",
+    "offer": {
+      "discount": "5"
+    },
+    "category": "Construction Tools",
+    "brand": "Tacklife"
+  },
+  {
+    "title": "Rechargeable Flashlight",
+    "image": "Featured1",
+    "price": "18.99",
+    "offer": {
+      "discount": "12"
+    },
+    "category": "Automotive Tools",
+    "brand": "Hilti"
+  },
+  {
+    "title": "Ratchet Wrench Set",
+    "image": "Featured3",
+    "price": "42.99",
+    "offer": {
+      "discount": "16"
+    },
+    "category": "Safety Gear",
+    "brand": "Tacklife"
+  },
+  {
+    "title": "Cordless Angle Grinder",
+    "image": "Featured2",
+    "price": "79.99",
+    "offer": {
+      "discount": "25"
+    },
+    "category": "Welding Tools",
+    "brand": "RIDGID"
+  },
+  {
+    "title": "Caulking Gun",
+    "image": "Featured1",
+    "price": "9.99",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Automotive Tools",
+    "brand": "Milwaukee"
+  },
+  {
+    "title": "Steel Hammer",
+    "image": "Featured3",
+    "price": "12.49",
+    "offer": {
+      "discount": "7"
+    },
+    "category": "Tool Storage",
+    "brand": "Makita"
+  },
+  {
+    "title": "Tool Organizer Box",
+    "image": "Featured2",
+    "price": "21.99",
+    "offer": {
+      "discount": "15"
+    },
+    "category": "Electrical Tools",
+    "brand": "DeWalt"
+  },
+  {
+    "title": "Drill Bit Set",
+    "image": "Featured1",
+    "price": "27.99",
+    "offer": {
+      "discount": "13"
+    },
+    "category": "Hand Tools",
+    "brand": "DeWalt"
+  },
+  {
+    "title": "Cordless Impact Wrench",
+    "image": "Featured3",
+    "price": "89.99",
+    "offer": {
+      "discount": "30"
+    },
+    "category": "Automotive Tools",
+    "brand": "Hitachi"
+  },
+  {
+    "title": "Pry Bar Set",
+    "image": "Featured2",
+    "price": "16.49",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Hand Tools",
+    "brand": "Metabo"
+  },
+  {
+    "title": "Welding Helmet",
+    "image": "Featured1",
+    "price": "54.99",
+    "offer": {
+      "discount": "18"
+    },
+    "category": "Tool Storage",
+    "brand": "Craftsman"
+  },
+  {
+    "title": "Claw Hammer",
+    "image": "Featured3",
+    "price": "8.99",
+    "offer": {
+      "discount": "6"
+    },
+    "category": "Automotive Tools",
+    "brand": "Ryobi"
+  },
+  {
+    "title": "Paint Sprayer",
+    "image": "Featured2",
+    "price": "74.99",
+    "offer": {
+      "discount": "22"
+    },
+    "category": "Ladders & Scaffolding",
+    "brand": "Dremel"
+  },
+  {
+    "title": "Bench Grinder",
+    "image": "Featured1",
+    "price": "64.99",
+    "offer": {
+      "discount": "20"
+    },
+    "category": "Automotive Tools",
+    "brand": "RIDGID"
+  },
+  {
+    "title": "Cordless Jigsaw",
+    "image": "Featured3",
+    "price": "49.99",
+    "offer": {
+      "discount": "17"
+    },
+    "category": "Plumbing Tools",
+    "brand": "Craftsman"
+  },
+  {
+    "title": "Work Apron",
+    "image": "Featured2",
+    "price": "14.49",
+    "offer": {
+      "discount": "8"
+    },
+    "category": "Electrical Tools",
+    "brand": "Milwaukee"
+  },
+  {
+    "title": "Pipe Wrench",
+    "image": "Featured1",
+    "price": "19.99",
+    "offer": {
+      "discount": "10"
+    },
+    "category": "Safety Gear",
+    "brand": "Bosch"
+  },
+  {
+    "title": "Digital Caliper",
+    "image": "Featured3",
+    "price": "23.99",
+    "offer": {
+      "discount": "12"
+    },
+    "category": "Electrical Tools",
+    "brand": "Makita"
+  },
+  {
+    "title": "Work Light",
+    "image": "Featured2",
+    "price": "27.99",
+    "offer": {
+      "discount": "15"
+    },
+    "category": "Construction Tools",
+    "brand": "DeWalt"
+  },
+  {
+    "title": "Circular Saw",
+    "image": "Featured1",
+    "price": "69.99",
+    "offer": {
+      "discount": "25"
+    },
+    "category": "Power Tools",
+    "brand": "Ryobi"
+  },
+  {
+    "title": "Staple Gun",
+    "image": "Featured3",
+    "price": "11.49",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Fastening Tools",
+    "brand": "RIDGID"
+  },
+  {
+    "title": "Hand Saw",
+    "image": "Featured2",
+    "price": "7.99",
+    "offer": {
+      "discount": "6"
+    },
+    "category": "Plumbing Tools",
+    "brand": "Stanley"
+  },
+  {
+    "title": "Work Boots",
+    "image": "Featured1",
+    "price": "44.99",
+    "offer": {
+      "discount": "15"
+    },
+    "category": "Safety Gear",
+    "brand": "Hitachi"
+  },
+  {
+    "title": "Air Blower",
+    "image": "Featured3",
+    "price": "39.99",
+    "offer": {
+      "discount": "19"
+    },
+    "category": "Construction Tools",
+    "brand": "Black+Decker"
+  },
+  {
+    "title": "Allen Key Set",
+    "image": "Featured2",
+    "price": "13.49",
+    "offer": {
+      "discount": "9"
+    },
+    "category": "Measuring Tools",
+    "brand": "Dremel"
+  },
+  {
+    "title": "Wood Chisel Set",
+    "image": "Featured1",
+    "price": "18.49",
+    "offer": {
+      "discount": "11"
+    },
+    "category": "Power Tools",
+    "brand": "Dremel"
+  },
+  {
+    "title": "Heat Resistant Gloves",
+    "image": "Featured3",
+    "price": "15.99",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Construction Tools",
+    "brand": "Metabo"
+  },
+  {
+    "title": "Tool Belt",
+    "image": "Featured2",
+    "price": "24.99",
+    "offer": {
+      "discount": "13"
+    },
+    "category": "Ladders & Scaffolding",
+    "brand": "Hilti"
+  },
+  {
+    "title": "Cordless Nail Gun",
+    "image": "Featured1",
+    "price": "84.99",
+    "offer": {
+      "discount": "28"
+    },
+    "category": "Gardening Tools",
+    "brand": "Tacklife"
+  },
+  {
+    "title": "Measuring Wheel",
+    "image": "Featured3",
+    "price": "33.99",
+    "offer": {
+      "discount": "12"
+    },
+    "category": "Cutting Tools",
+    "brand": "Dremel"
+  },
+  {
+    "title": "Lawn Mower",
+    "image": "Featured2",
+    "price": "129.99",
+    "offer": {
+      "discount": "30"
+    },
+    "category": "Safety Gear",
+    "brand": "Tacklife"
+  },
+  {
+    "title": "Electric Paint Mixer",
+    "image": "Featured1",
+    "price": "26.99",
+    "offer": {
+      "discount": "N/A"
+    },
+    "category": "Fastening Tools",
+    "brand": "Metabo"
+  },
+  {
+    "title": "Angle Finder",
+    "image": "Featured3",
+    "price": "17.99",
+    "offer": {
+      "discount": "10"
+    },
+    "category": "Measuring Tools",
+    "brand": "Tacklife"
+  },
+  {
+    "title": "Cordless Chainsaw",
+    "image": "Featured2",
+    "price": "99.99",
+    "offer": {
+      "discount": "27"
+    },
+    "category": "Safety Gear",
+    "brand": "Hitachi"
+  },
+  {
+    "title": "Shop Vacuum Cleaner",
+    "image": "Featured1",
+    "price": "59.99",
+    "offer": {
+      "discount": "22"
+    },
+    "category": "Gardening Tools",
+    "brand": "Makita"
+  },
+  {
+    "title": "Plier Set",
+    "image": "Featured3",
+    "price": "14.99",
+    "offer": {
+      "discount": "9"
+    },
+    "category": "Automotive Tools",
+    "brand": "Hilti"
+  },
+  {
+    "title": "Workbench Clamp",
+    "image": "Featured2",
+    "price": "19.49",
+    "offer": {
+      "discount": "11"
+    },
+    "category": "Welding Tools",
+    "brand": "DeWalt"
+  }
+]
