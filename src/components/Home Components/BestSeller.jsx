@@ -1,10 +1,5 @@
 import { Link } from "react-router";
 import ProductCard from "../ProductCard";
-
-import Featured1 from "../../assets/featured/featured-1.jpg";
-import Featured2 from "../../assets/featured/featured-2.jpg";
-import Featured3 from "../../assets/featured/featured-3.jpg";
-import Featured4 from "../../assets/featured/featured-4.jpg";
 import Heading from "../Heading";
 
 const BestSeller = () => {
@@ -39,25 +34,25 @@ const BestSeller = () => {
 const data = [
   {
     title: "Digital Multimeter",
-    image: Featured1,
+    image: "Featured1",
     price: "29.99",
     offer: { discount: "10" },
   },
   {
     title: "Reflective Vest",
-    image: Featured2,
+    image: "Featured2",
     price: "14.99",
     offer: { discount: "15" },
   },
   {
     title: "Self-Leveling Laser",
-    image: Featured3,
+    image: "Featured3",
     price: "9.99",
     offer: { discount: "5" },
   },
   {
     title: "Hydraulic Car Jack",
-    image: Featured4,
+    image: "Featured4",
     price: "29.99",
     offer: { discount: "25" },
   },

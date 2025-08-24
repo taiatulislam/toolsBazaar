@@ -12,8 +12,8 @@ const Shop = () => {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState([]);
-
-  console.log("selectedCategory", selectedCategory);
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
   const fetchProducts = async () => {
     try {
@@ -43,9 +43,20 @@ const Shop = () => {
   const filteredProducts = products.filter((p) => {
     const categoryMatch =
       selectedCategory.length === 0 || selectedCategory.includes(p.category);
+
     const brandMatch =
       selectedBrand.length === 0 || selectedBrand.includes(p.brand);
-    return categoryMatch && brandMatch;
+
+    const discountedPrice =
+      p.offer?.discount && p.offer.discount !== "N/A"
+        ? p.price - (p.price * parseInt(p.offer.discount)) / 100
+        : p.price;
+
+    const priceMatch =
+      (!minPrice || discountedPrice >= Number(minPrice)) &&
+      (!maxPrice || discountedPrice <= Number(maxPrice));
+
+    return categoryMatch && brandMatch && priceMatch;
   });
 
   const handleCategoryChange = (category) => {
@@ -107,20 +118,20 @@ const Shop = () => {
                   type="number"
                   id="minPrice"
                   placeholder="Min"
+                  value={minPrice}
+                  onChange={(e) => setMinPrice(e.target.value)}
                   className="w-full rounded-md border border-gray-300 py-2 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
                 />
                 <input
                   type="number"
                   id="maxPrice"
                   placeholder="Max"
+                  value={maxPrice}
+                  onChange={(e) => setMaxPrice(e.target.value)}
                   className="w-full rounded-md border border-gray-300 py-2 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
                 />
               </div>
             </div>
-
-            <button className="w-full text-white bg-gray-800 hover:bg-gray-900 focus:outline-none font-medium rounded-md py-2 px-4">
-              Apply
-            </button>
           </div>
         </aside>
 
