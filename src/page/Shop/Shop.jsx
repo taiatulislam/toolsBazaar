@@ -3,6 +3,8 @@ import ProductCard from "../../components/ProductCard";
 import "./Shop.css";
 import SectionBanner from "../../components/SectionBanner";
 import Pagination from "../../components/Pagination";
+import { FaFilter } from "react-icons/fa";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const Shop = () => {
   const [showAllCategories, setShowAllCategories] = useState(false);
@@ -14,6 +16,7 @@ const Shop = () => {
   const [selectedBrand, setSelectedBrand] = useState([]);
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+  const [openFilter, setOpenFilter] = useState(false);
 
   const fetchProducts = async () => {
     try {
@@ -71,6 +74,10 @@ const Shop = () => {
     setSelectedBrand((prev) =>
       prev.includes(brand) ? prev.filter((c) => c !== brand) : [...prev, brand]
     );
+  };
+
+  const toggleDropdown = () => {
+    setOpenFilter((prev) => !prev);
   };
 
   if (loading)
@@ -134,6 +141,72 @@ const Shop = () => {
             </div>
           </div>
         </aside>
+
+        <div
+          onClick={toggleDropdown}
+          className="block md:hidden absolute right-2 top-10 border border-gray-200 z-10 shadow-2xl p-2 rounded-lg cursor-pointer bg-white"
+        >
+          {openFilter ? (
+            <IoIosCloseCircleOutline size={18} />
+          ) : (
+            <FaFilter size={18} />
+          )}
+        </div>
+
+        {/* Dropdown Content */}
+        {openFilter && (
+          <div className="absolute right-2 top-20 w-48 bg-white border border-gray-200 shadow-lg rounded-lg p-1 z-20 animate-fadeIn">
+            <aside className="h-[300px] overflow-y-auto scrollbar-hide bg-white">
+              {/* Category Filter */}
+              <TypeFilter
+                title="Filter by category"
+                data={categories}
+                showAll={showAllCategories}
+                setShowAll={setShowAllCategories}
+                selectedItems={selectedCategory}
+                handleChange={handleCategoryChange}
+              />
+
+              {/* Brand Filter */}
+              <TypeFilter
+                title="Filter by brands"
+                data={brands}
+                showAll={showAllBrands}
+                setShowAll={setShowAllBrands}
+                selectedItems={selectedBrand}
+                handleChange={handleBrandChange}
+              />
+
+              {/* Price Filter */}
+              <div className="py-3">
+                <h2 className="text-lg font-semibold text-gray-800 pb-2 border-b border-gray-200">
+                  Set Price Range
+                </h2>
+
+                <div className="space-y-1 my-2">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="number"
+                      id="minPrice"
+                      placeholder="Min"
+                      value={minPrice}
+                      onChange={(e) => setMinPrice(e.target.value)}
+                      className="w-full rounded-md border border-gray-300 py-2 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                    />
+                    <input
+                      type="number"
+                      id="maxPrice"
+                      placeholder="Max"
+                      value={maxPrice}
+                      onChange={(e) => setMaxPrice(e.target.value)}
+                      className="w-full rounded-md border border-gray-300 py-2 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                    />
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        )}
 
         {/* Product Grid */}
         <main className="w-full px-2 md:px-10 pt-5">
