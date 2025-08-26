@@ -76,10 +76,6 @@ const Shop = () => {
     );
   };
 
-  const toggleDropdown = () => {
-    setOpenFilter((prev) => !prev);
-  };
-
   if (loading)
     return (
       <div style={{ height: "80vh" }}>
@@ -142,21 +138,29 @@ const Shop = () => {
           </div>
         </aside>
 
-        <div
-          onClick={toggleDropdown}
-          className="block md:hidden absolute right-2 top-10 border border-gray-200 z-10 shadow-2xl p-2 rounded-lg cursor-pointer bg-white"
-        >
-          {openFilter ? (
-            <IoIosCloseCircleOutline size={18} />
-          ) : (
-            <FaFilter size={18} />
-          )}
-        </div>
+        {!openFilter && (
+          <div
+            className="block md:hidden fixed right-2 top-40 border border-gray-200 z-10 shadow-2xl p-1.5 rounded-lg"
+            onClick={() => setOpenFilter(!openFilter)}
+          >
+            <FaFilter size={16} style={{ color: "#f5e141" }} />
+          </div>
+        )}
 
         {/* Dropdown Content */}
         {openFilter && (
-          <div className="absolute right-2 top-20 w-48 bg-white border border-gray-200 shadow-lg rounded-lg p-1 z-20 animate-fadeIn">
-            <aside className="h-[300px] overflow-y-auto scrollbar-hide bg-white">
+          <div className="fixed right-2 top-40 w-48 bg-white border border-gray-200 shadow-lg rounded-lg p-1 z-20 animate-fadeIn">
+            {/* Close Button Inside */}
+            <div className="flex justify-end">
+              <button onClick={() => setOpenFilter(false)}>
+                <IoIosCloseCircleOutline
+                  size={22}
+                  className="text-gray-600 hover:text-red-500"
+                />
+              </button>
+            </div>
+
+            <aside className="h-[300px] overflow-y-auto scrollbar-hide bg-white mt-1">
               {/* Category Filter */}
               <TypeFilter
                 title="Filter by category"
@@ -178,8 +182,8 @@ const Shop = () => {
               />
 
               {/* Price Filter */}
-              <div className="py-3">
-                <h2 className="text-lg font-semibold text-gray-800 pb-2 border-b border-gray-200">
+              <div className="p-2">
+                <h2 className="text-sm md:text-lg font-semibold text-gray-800 pb-2 border-b border-gray-200">
                   Set Price Range
                 </h2>
 
@@ -276,9 +280,9 @@ const TypeFilter = ({
   handleChange,
 }) => {
   return (
-    <div className="py-3 px-4">
+    <div className="py-2 px-4">
       <div className="flex items-center">
-        <h2 className="text-lg font-semibold text-gray-800 w-full pb-2 border-b border-gray-200">
+        <h2 className="textsm md:text-lg font-semibold text-gray-800 w-full pb-2 border-b border-gray-200">
           {title}
         </h2>
       </div>
