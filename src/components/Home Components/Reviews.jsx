@@ -1,126 +1,100 @@
 import React from "react";
 import Slider from "react-slick";
 import { FaStar } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const reviews = [
   {
-    clientReview:
-      "Great website for buying and selling hardware products. Easy to navigate and find what I need. Will definitely use again!",
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "JohnDoe",
+    id: 1,
+    name: "Jone Copper",
+    role: "UI/UX Designer",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    review:
+      "Working with Jone was a game-changer for our project! His keen eye for detail and creative approach to product design elevated our concept beyond our expectations. Highly recommended!",
+    rating: 5,
   },
   {
-    clientReview:
-      "Smooth transactions every time. Tools Bazaar has a wide range of products at competitive prices. Highly recommend.",
-    starRating: 4,
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "JaneSmith",
+    id: 2,
+    name: "Sophia Smith",
+    role: "Frontend Developer",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    review:
+      "Sophia delivered clean, scalable code with precision. Her expertise in React and Tailwind significantly boosted our project's performance and usability.",
+    rating: 4,
   },
   {
-    clientReview:
-      "Excellent customer service and fast shipping. Found exactly what I was looking for. Will be a repeat customer.",
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "MikeJohnson",
+    id: 3,
+    name: "Michael Johnson",
+    role: "Project Manager",
+    image: "https://randomuser.me/api/portraits/men/65.jpg",
+    review:
+      "Michael ensured smooth workflow management and timely delivery of milestones. His leadership and communication skills are exceptional.",
+    rating: 5,
   },
   {
-    clientReview:
-      "Good selection of hardware items. Prices are reasonable. Website interface could be improved for better user experience.",
-    starRating: 3,
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "SarahBrown",
+    id: 4,
+    name: "Emily Davis",
+    role: "Graphic Designer",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    review:
+      "Emily's designs are always modern, vibrant, and user-friendly. She has an amazing ability to transform ideas into stunning visuals.",
+    rating: 5,
   },
   {
-    clientReview:
-      "Tools Bazaar offers great deals on bulk purchases. Saved me a lot of money for my business.",
-    starRating: 4,
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "DavidClark",
-  },
-  {
-    clientReview:
-      "The website layout is clean and easy to use. However, some product descriptions lack detail. Overall satisfied with my purchase.",
-    starRating: 4,
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "EmilyTaylor",
-  },
-  {
-    clientReview:
-      "Had an issue with an order, but customer service was quick to resolve it. Appreciate the prompt response.",
-    starRating: 4,
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "ChrisWilson",
-  },
-  {
-    clientReview:
-      "Tools Bazaar has become my go-to for hardware needs. Reliable service and quality products.",
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "JenniferLee",
-  },
-  {
-    clientReview:
-      "Average experience overall. Prices are decent, but shipping took longer than expected.",
-    starRating: 3,
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "KevinNguyen",
-  },
-  {
-    clientReview:
-      "Impressive selection of hardware items. Prices are competitive. Will recommend to friends.",
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "AmandaGarcia",
-  },
-  {
-    clientReview:
-      "User-friendly website. Found what I needed quickly and checkout was smooth. Will shop again.",
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "DanielMartinez",
-  },
-  {
-    clientReview:
-      "Decent prices, but could use more variety in product offerings. Overall satisfied with my purchase.",
-    starRating: 3,
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "MelissaWong",
-  },
-  {
-    clientReview:
-      "Love the convenience of shopping at Tools Bazaar. Always find what I need at a good price.",
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "RyanJohnson",
-  },
-  {
-    clientReview:
-      "Website is easy to use, but could benefit from more filtering options. Products arrived as described.",
-    starRating: 4,
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "LauraDavis",
-  },
-  {
-    clientReview:
-      "Great experience overall. Will definitely recommend to colleagues. Keep up the good work!",
-    userProfile: "https://i.ibb.co/W5Wn9R9/Stephen-King.jpg",
-    userName: "MarkThompson",
+    id: 5,
+    name: "David Wilson",
+    role: "Backend Developer",
+    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    review:
+      "David is a brilliant backend engineer. His API integrations are smooth, efficient, and well-documented, making collaboration seamless.",
+    rating: 4,
   },
 ];
 
+const PrevArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute z-10 left-0 top-2/3 -translate-y-1/2 bg-white shadow-md p-3 rounded-full border text-blue-600 hover:bg-blue-50"
+  >
+    <FaArrowLeft size={18} />
+  </button>
+);
+
+const NextArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute right-0 top-2/3 -translate-y-1/2 bg-white shadow-md p-3 rounded-full border text-blue-600 hover:bg-blue-50"
+  >
+    <FaArrowRight size={18} />
+  </button>
+);
+
 export default function Reviews() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true,
-    arrows: false,
-    appendDots: (dots) => (
-      <div style={{ bottom: "-25px" }}>
-        <ul style={{ margin: "0px" }}> {dots} </ul>
-      </div>
-    ),
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
   };
 
+  const colors = [
+    "bg-red-500",
+    "bg-green-500",
+    "bg-purple-500",
+    "bg-pink-500",
+    "bg-orange-500",
+    "bg-indigo-500",
+    "bg-teal-500",
+    "bg-amber-500",
+  ];
+
   return (
-    <div className="py-14 px-5 mx-auto">
+    <div className="max-w-6xl py-5 md:py-14 mx-auto px-5">
       <div className="flex flex-col items-center justify-center mt-10 mb-2">
         <h2 className="text-xl md:text-3xl lg:text-4xl font-bold montserrat text-center mb-3 text-nowrap">
           What Our Customers Are Saying
@@ -138,27 +112,44 @@ export default function Reviews() {
         </svg>
       </div>
 
-      <Slider {...settings} className="mySlider py-10">
-        {reviews.map((review) => (
-          <div key={review.clientReview} className="text-center px-5">
-            <img
-              className="w-16 rounded-full mx-auto"
-              src={review.userProfile}
-              alt=""
-            />
-            <h3 className="font-semibold text-red-600 text-lg py-1">
-              {review.userName}
-            </h3>
-            <span className="flex justify-center">
-              <FaStar style={{ color: "#FFCC00" }} />
-              <FaStar style={{ color: "#FFCC00" }} />
-              <FaStar style={{ color: "#FFCC00" }} />
-              <FaStar style={{ color: "#FFCC00" }} />
-              <FaStar style={{ color: "#FFCC00" }} />
-            </span>
-            <p className="pt-8">{review.clientReview}</p>
-          </div>
-        ))}
+      <Slider {...settings}>
+        {reviews.map(({ id, name, role, image, review, rating }) => {
+          const randomColor = colors[Math.floor(Math.random() * colors.length)];
+          return (
+            <div
+              key={id}
+              className="flex flex-col md:flex-row items-center bg-white rounded-xl p-6 relative"
+            >
+              {/* Image */}
+              <div className="relative flex-shrink-0">
+                <div
+                  className={`${randomColor} absolute -bottom-3 -left-3 w-full h-full rounded-xl`}
+                ></div>
+                <img
+                  src={image}
+                  alt={name}
+                  className="relative rounded-xl w-48 h-48 object-cover z-10"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="mt-6 md:mt-0 md:ml-10 flex-1 text-center md:text-left">
+                <p className="text-blue-500 text-4xl leading-none mb-3">“</p>
+                <p className="text-gray-600 mb-4">{review}</p>
+
+                {/* Rating */}
+                <div className="flex justify-center md:justify-start mb-3">
+                  {Array.from({ length: rating }, (_, i) => (
+                    <FaStar key={i} className="text-yellow-400 mr-1" />
+                  ))}
+                </div>
+
+                <h3 className="text-lg font-bold text-gray-800">{name}</h3>
+                <p className="text-sm text-gray-500">{role}</p>
+              </div>
+            </div>
+          );
+        })}
       </Slider>
     </div>
   );
