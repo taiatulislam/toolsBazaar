@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { FaStar } from "react-icons/fa";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaQuoteLeft } from "react-icons/fa";
 
 const reviews = [
   {
@@ -71,15 +71,36 @@ const NextArrow = ({ onClick }) => (
 
 export default function Reviews() {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 600,
-    slidesToShow: 1,
+    autoplaySpeed: 3500,
+    speed: 700,
+    slidesToShow: 3,
     slidesToScroll: 1,
+    arrows: true,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const colors = [
@@ -115,37 +136,58 @@ export default function Reviews() {
       <Slider {...settings}>
         {reviews.map(({ id, name, role, image, review, rating }) => {
           const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
           return (
-            <div
-              key={id}
-              className="flex flex-col md:flex-row items-center bg-white rounded-xl p-6 relative"
-            >
-              {/* Image */}
-              <div className="relative flex-shrink-0">
-                <div
-                  className={`${randomColor} absolute -bottom-3 -left-3 w-full h-full rounded-xl`}
-                ></div>
-                <img
-                  src={image}
-                  alt={name}
-                  className="relative rounded-xl w-48 h-48 object-cover z-10"
-                />
-              </div>
+            <div key={id} className="px-3 h-full">
+              {/* Full Height Wrapper */}
+              <div className="h-full pb-5">
+                <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition duration-300 p-8 border border-gray-100 relative overflow-hidden group flex flex-col h-[400px]">
+                  {/* Decorative Background */}
+                  <div
+                    className={`${randomColor} absolute top-0 right-0 w-28 h-28 rounded-bl-full opacity-20`}
+                  ></div>
 
-              {/* Content */}
-              <div className="mt-6 md:mt-0 md:ml-10 flex-1 text-center md:text-left">
-                <p className="text-blue-500 text-4xl leading-none mb-3">“</p>
-                <p className="text-gray-600 mb-4">{review}</p>
+                  {/* Quote Icon */}
+                  <FaQuoteLeft className="text-primary text-4xl mb-4 flex-shrink-0" />
 
-                {/* Rating */}
-                <div className="flex justify-center md:justify-start mb-3">
-                  {Array.from({ length: rating }, (_, i) => (
-                    <FaStar key={i} className="text-yellow-400 mr-1" />
-                  ))}
+                  {/* Review Text */}
+                  <div className="flex-grow">
+                    <p className="text-gray-600 leading-relaxed mb-6 line-clamp-5">
+                      {review}
+                    </p>
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex justify-center md:justify-start mb-6 flex-shrink-0">
+                    {Array.from({ length: rating }, (_, i) => (
+                      <FaStar
+                        key={i}
+                        className="text-yellow-400 mr-1 text-lg"
+                      />
+                    ))}
+                  </div>
+
+                  {/* User Info */}
+                  <div className="flex items-center gap-4 border-t pt-5 mt-auto flex-shrink-0">
+                    <div className="relative">
+                      <div
+                        className={`${randomColor} absolute -bottom-2 -right-2 w-full h-full rounded-full opacity-50`}
+                      ></div>
+                      <img
+                        src={image}
+                        alt={name}
+                        className="relative w-20 h-20 rounded-full object-cover border-4 border-white shadow-md"
+                      />
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-800">
+                        {name}
+                      </h3>
+                      <p className="text-sm text-gray-500">{role}</p>
+                    </div>
+                  </div>
                 </div>
-
-                <h3 className="text-lg font-bold text-gray-800">{name}</h3>
-                <p className="text-sm text-gray-500">{role}</p>
               </div>
             </div>
           );
