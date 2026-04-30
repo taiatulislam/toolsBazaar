@@ -7,8 +7,8 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-import app from "../../firebase.config";
 import secureLocalStorage from "react-secure-storage";
+import app from "../firebase/firebase.config";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext(null);
